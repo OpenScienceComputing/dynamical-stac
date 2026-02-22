@@ -71,8 +71,8 @@
       "longitude": {
         "axis": "x",
         "extent": [
-          -180.0,
-          179.75
+          -179.5,
+          179.5
         ],
         "step": 0.25,
         "description": "Longitude",
@@ -82,8 +82,8 @@
       "latitude": {
         "axis": "y",
         "extent": [
-          -90.0,
-          90.0
+          -89.5,
+          89.5
         ],
         "step": -0.25,
         "description": "Latitude",
@@ -118,9 +118,9 @@
           1440
         ]
       },
-      "dew_point_temperature_2m": {
+      "geopotential_height_500hpa": {
         "type": "data",
-        "description": "2 metre dewpoint temperature",
+        "description": "Geopotential height",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -128,12 +128,12 @@
           "latitude",
           "longitude"
         ],
-        "unit": "degree_Celsius",
+        "unit": "m",
         "attrs": {
-          "long_name": "2 metre dewpoint temperature",
-          "short_name": "2d",
-          "standard_name": "dew_point_temperature",
-          "units": "degree_Celsius",
+          "long_name": "Geopotential height",
+          "short_name": "gh",
+          "standard_name": "geopotential_height",
+          "units": "m",
           "step_type": "instant"
         },
         "shape": [
@@ -170,6 +170,32 @@
           1440
         ]
       },
+      "dew_point_temperature_2m": {
+        "type": "data",
+        "description": "2 metre dewpoint temperature",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "2 metre dewpoint temperature",
+          "short_name": "2d",
+          "standard_name": "dew_point_temperature",
+          "units": "degree_Celsius",
+          "step_type": "instant"
+        },
+        "shape": [
+          693,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
       "downward_long_wave_radiation_flux_surface": {
         "type": "data",
         "description": "Surface downward long-wave radiation flux",
@@ -187,58 +213,6 @@
           "standard_name": "surface_downwelling_longwave_flux_in_air",
           "units": "W m-2",
           "step_type": "avg"
-        },
-        "shape": [
-          693,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "geopotential_height_500hpa": {
-        "type": "data",
-        "description": "Geopotential height",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m",
-        "attrs": {
-          "long_name": "Geopotential height",
-          "short_name": "gh",
-          "standard_name": "geopotential_height",
-          "units": "m",
-          "step_type": "instant"
-        },
-        "shape": [
-          693,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
-          "step_type": "instant"
         },
         "shape": [
           693,
@@ -274,33 +248,6 @@
           1440
         ]
       },
-      "precipitation_surface": {
-        "type": "data",
-        "description": "Precipitation rate",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "kg m-2 s-1",
-        "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
-          "step_type": "avg"
-        },
-        "shape": [
-          693,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
       "wind_u_100m": {
         "type": "data",
         "description": "100 metre U wind component",
@@ -316,58 +263,6 @@
           "long_name": "100 metre U wind component",
           "short_name": "100u",
           "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          693,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          693,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "wind_v_100m": {
-        "type": "data",
-        "description": "100 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
-          "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -405,6 +300,85 @@
           1440
         ]
       },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          693,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
+      "precipitation_surface": {
+        "type": "data",
+        "description": "Precipitation rate",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "kg m-2 s-1",
+        "attrs": {
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "step_type": "avg"
+        },
+        "shape": [
+          693,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
+      "wind_v_100m": {
+        "type": "data",
+        "description": "100 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          693,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
       "wind_v_10m": {
         "type": "data",
         "description": "10 metre V wind component",
@@ -431,21 +405,30 @@
           1440
         ]
       },
-      "expected_forecast_length": {
-        "type": "auxiliary",
-        "description": "Expected forecast length",
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
         "dimensions": [
-          "init_time"
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
         ],
+        "unit": "Pa",
         "attrs": {
-          "long_name": "Expected forecast length",
-          "statistics_approximate": {
-            "min": "0 days 00:00:00",
-            "max": "15 days 00:00:00"
-          }
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
         },
         "shape": [
-          693
+          693,
+          85,
+          51,
+          721,
+          1440
         ]
       },
       "ingested_forecast_length": {
@@ -456,6 +439,43 @@
         ],
         "attrs": {
           "long_name": "Ingested forecast length",
+          "statistics_approximate": {
+            "min": "0 days 00:00:00",
+            "max": "15 days 00:00:00"
+          }
+        },
+        "shape": [
+          693
+        ]
+      },
+      "valid_time": {
+        "type": "auxiliary",
+        "description": "Valid time",
+        "dimensions": [
+          "init_time",
+          "lead_time"
+        ],
+        "attrs": {
+          "long_name": "Valid time",
+          "standard_name": "time",
+          "statistics_approximate": {
+            "min": "2024-04-01T00:00:00",
+            "max": "Present"
+          }
+        },
+        "shape": [
+          693,
+          85
+        ]
+      },
+      "expected_forecast_length": {
+        "type": "auxiliary",
+        "description": "Expected forecast length",
+        "dimensions": [
+          "init_time"
+        ],
+        "attrs": {
+          "long_name": "Expected forecast length",
           "statistics_approximate": {
             "min": "0 days 00:00:00",
             "max": "15 days 00:00:00"
@@ -483,26 +503,6 @@
           "spatial_ref": "GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",6371229,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH]]"
         },
         "shape": []
-      },
-      "valid_time": {
-        "type": "auxiliary",
-        "description": "Valid time",
-        "dimensions": [
-          "init_time",
-          "lead_time"
-        ],
-        "attrs": {
-          "long_name": "Valid time",
-          "standard_name": "time",
-          "statistics_approximate": {
-            "min": "2024-04-01T00:00:00",
-            "max": "Present"
-          }
-        },
-        "shape": [
-          693,
-          85
-        ]
       }
     },
     "datetime": null
