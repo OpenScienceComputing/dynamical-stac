@@ -14,33 +14,33 @@
     "coordinates": [
       [
         [
-          -179.5,
-          -89.5
+          -180.0,
+          -90.0
         ],
         [
-          -179.5,
-          89.5
+          -180.0,
+          90.0
         ],
         [
-          179.5,
-          89.5
+          180.0,
+          90.0
         ],
         [
-          179.5,
-          -89.5
+          180.0,
+          -90.0
         ],
         [
-          -179.5,
-          -89.5
+          -180.0,
+          -90.0
         ]
       ]
     ]
   },
   "bbox": [
-    -179.5,
-    -89.5,
-    179.5,
-    89.5
+    -180.0,
+    -90.0,
+    180.0,
+    90.0
   ],
   "properties": {
     "title": "NOAA GFS - dynamical.org Icechunk Zarr",
@@ -71,8 +71,8 @@
       "longitude": {
         "axis": "x",
         "extent": [
-          -179.5,
-          179.5
+          -180.0,
+          179.75
         ],
         "step": 0.25,
         "description": "Longitude",
@@ -82,8 +82,8 @@
       "latitude": {
         "axis": "y",
         "extent": [
-          -89.5,
-          89.5
+          -90.0,
+          90.0
         ],
         "step": -0.25,
         "description": "Latitude",
@@ -116,54 +116,6 @@
           1440
         ]
       },
-      "categorical_rain_surface": {
-        "type": "data",
-        "description": "Categorical rain",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical rain",
-          "short_name": "crain",
-          "units": "1",
-          "comment": "Presence/absence over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z). 0=no; 1=yes.",
-          "step_type": "avg"
-        },
-        "shape": [
-          7035,
-          209,
-          721,
-          1440
-        ]
-      },
-      "categorical_snow_surface": {
-        "type": "data",
-        "description": "Categorical snow",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical snow",
-          "short_name": "csnow",
-          "units": "1",
-          "comment": "Presence/absence over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z). 0=no; 1=yes.",
-          "step_type": "avg"
-        },
-        "shape": [
-          7035,
-          209,
-          721,
-          1440
-        ]
-      },
       "categorical_ice_pellets_surface": {
         "type": "data",
         "description": "Categorical ice pellets",
@@ -179,6 +131,31 @@
           "short_name": "cicep",
           "units": "1",
           "comment": "Presence/absence over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z). 0=no; 1=yes.",
+          "step_type": "avg"
+        },
+        "shape": [
+          7035,
+          209,
+          721,
+          1440
+        ]
+      },
+      "downward_short_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward short-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward short-wave radiation flux",
+          "short_name": "sdswrf",
+          "standard_name": "surface_downwelling_shortwave_flux_in_air",
+          "units": "W m-2",
+          "comment": "Average over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z).",
           "step_type": "avg"
         },
         "shape": [
@@ -237,96 +214,22 @@
           1440
         ]
       },
-      "downward_short_wave_radiation_flux_surface": {
+      "categorical_rain_surface": {
         "type": "data",
-        "description": "Surface downward short-wave radiation flux",
+        "description": "Categorical rain",
         "dimensions": [
           "init_time",
           "lead_time",
           "latitude",
           "longitude"
         ],
-        "unit": "W m-2",
+        "unit": "1",
         "attrs": {
-          "long_name": "Surface downward short-wave radiation flux",
-          "short_name": "sdswrf",
-          "standard_name": "surface_downwelling_shortwave_flux_in_air",
-          "units": "W m-2",
-          "comment": "Average over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z).",
+          "long_name": "Categorical rain",
+          "short_name": "crain",
+          "units": "1",
+          "comment": "Presence/absence over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z). 0=no; 1=yes.",
           "step_type": "avg"
-        },
-        "shape": [
-          7035,
-          209,
-          721,
-          1440
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          7035,
-          209,
-          721,
-          1440
-        ]
-      },
-      "precipitable_water_atmosphere": {
-        "type": "data",
-        "description": "Precipitable water",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "kg m-2",
-        "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          7035,
-          209,
-          721,
-          1440
-        ]
-      },
-      "minimum_temperature_2m": {
-        "type": "data",
-        "description": "Minimum temperature",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "Minimum temperature",
-          "short_name": "tmin",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "comment": "Minimum over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z).",
-          "step_type": "min"
         },
         "shape": [
           7035,
@@ -360,6 +263,55 @@
           1440
         ]
       },
+      "minimum_temperature_2m": {
+        "type": "data",
+        "description": "Minimum temperature",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "Minimum temperature",
+          "short_name": "tmin",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "comment": "Minimum over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z).",
+          "step_type": "min"
+        },
+        "shape": [
+          7035,
+          209,
+          721,
+          1440
+        ]
+      },
+      "categorical_snow_surface": {
+        "type": "data",
+        "description": "Categorical snow",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical snow",
+          "short_name": "csnow",
+          "units": "1",
+          "comment": "Presence/absence over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z). 0=no; 1=yes.",
+          "step_type": "avg"
+        },
+        "shape": [
+          7035,
+          209,
+          721,
+          1440
+        ]
+      },
       "percent_frozen_precipitation_surface": {
         "type": "data",
         "description": "Percent frozen precipitation",
@@ -374,6 +326,79 @@
           "long_name": "Percent frozen precipitation",
           "short_name": "cpofp",
           "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          7035,
+          209,
+          721,
+          1440
+        ]
+      },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          7035,
+          209,
+          721,
+          1440
+        ]
+      },
+      "precipitation_surface": {
+        "type": "data",
+        "description": "Precipitation rate",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "kg m-2 s-1",
+        "attrs": {
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "step_type": "avg"
+        },
+        "shape": [
+          7035,
+          209,
+          721,
+          1440
+        ]
+      },
+      "wind_u_100m": {
+        "type": "data",
+        "description": "100 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
           "step_type": "instant"
         },
         "shape": [
@@ -432,21 +457,21 @@
           1440
         ]
       },
-      "wind_u_100m": {
+      "relative_humidity_2m": {
         "type": "data",
-        "description": "100 metre U wind component",
+        "description": "2 metre relative humidity",
         "dimensions": [
           "init_time",
           "lead_time",
           "latitude",
           "longitude"
         ],
-        "unit": "m s-1",
+        "unit": "percent",
         "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
           "step_type": "instant"
         },
         "shape": [
@@ -456,46 +481,21 @@
           1440
         ]
       },
-      "precipitation_surface": {
+      "precipitable_water_atmosphere": {
         "type": "data",
-        "description": "Precipitation rate",
+        "description": "Precipitable water",
         "dimensions": [
           "init_time",
           "lead_time",
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2 s-1",
+        "unit": "kg m-2",
         "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
-          "step_type": "avg"
-        },
-        "shape": [
-          7035,
-          209,
-          721,
-          1440
-        ]
-      },
-      "wind_v_100m": {
-        "type": "data",
-        "description": "100 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
           "step_type": "instant"
         },
         "shape": [
@@ -529,33 +529,9 @@
           1440
         ]
       },
-      "relative_humidity_2m": {
+      "wind_v_100m": {
         "type": "data",
-        "description": "2 metre relative humidity",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          7035,
-          209,
-          721,
-          1440
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
+        "description": "100 metre V wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -564,8 +540,8 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
           "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
@@ -601,21 +577,28 @@
           1440
         ]
       },
-      "expected_forecast_length": {
-        "type": "auxiliary",
-        "description": "Expected forecast length",
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
         "dimensions": [
-          "init_time"
+          "init_time",
+          "lead_time",
+          "latitude",
+          "longitude"
         ],
+        "unit": "m s-1",
         "attrs": {
-          "long_name": "Expected forecast length",
-          "statistics_approximate": {
-            "min": "0 days 00:00:00",
-            "max": "16 days 00:00:00"
-          }
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
         },
         "shape": [
-          7035
+          7035,
+          209,
+          721,
+          1440
         ]
       },
       "ingested_forecast_length": {
@@ -626,6 +609,23 @@
         ],
         "attrs": {
           "long_name": "Ingested forecast length",
+          "statistics_approximate": {
+            "min": "0 days 00:00:00",
+            "max": "16 days 00:00:00"
+          }
+        },
+        "shape": [
+          7035
+        ]
+      },
+      "expected_forecast_length": {
+        "type": "auxiliary",
+        "description": "Expected forecast length",
+        "dimensions": [
+          "init_time"
+        ],
+        "attrs": {
+          "long_name": "Expected forecast length",
           "statistics_approximate": {
             "min": "0 days 00:00:00",
             "max": "16 days 00:00:00"
