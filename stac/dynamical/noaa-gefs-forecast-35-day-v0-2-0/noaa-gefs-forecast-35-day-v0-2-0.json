@@ -144,33 +144,6 @@
           1440
         ]
       },
-      "downward_long_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward long-wave radiation flux",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward long-wave radiation flux",
-          "short_name": "sdlwrf",
-          "standard_name": "surface_downwelling_longwave_flux_in_air",
-          "units": "W m-2",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
-          "step_type": "avg"
-        },
-        "shape": [
-          1971,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
       "downward_short_wave_radiation_flux_surface": {
         "type": "data",
         "description": "Surface downward short-wave radiation flux",
@@ -250,6 +223,33 @@
           1440
         ]
       },
+      "downward_long_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward long-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward long-wave radiation flux",
+          "short_name": "sdlwrf",
+          "standard_name": "surface_downwelling_longwave_flux_in_air",
+          "units": "W m-2",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
+          "step_type": "avg"
+        },
+        "shape": [
+          1971,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
       "categorical_snow_surface": {
         "type": "data",
         "description": "Categorical snow",
@@ -276,9 +276,9 @@
           1440
         ]
       },
-      "precipitation_surface": {
+      "pressure_reduced_to_mean_sea_level": {
         "type": "data",
-        "description": "Precipitation rate",
+        "description": "Pressure reduced to MSL",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -286,14 +286,39 @@
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2 s-1",
+        "unit": "Pa",
         "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
-          "step_type": "avg"
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          1971,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "maximum_temperature_2m": {
+        "type": "data",
+        "description": "Maximum temperature",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "Maximum temperature",
+          "short_name": "tmax",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "max"
         },
         "shape": [
           1971,
@@ -355,9 +380,9 @@
           1440
         ]
       },
-      "maximum_temperature_2m": {
+      "precipitation_surface": {
         "type": "data",
-        "description": "Maximum temperature",
+        "description": "Precipitation rate",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -365,13 +390,14 @@
           "latitude",
           "longitude"
         ],
-        "unit": "degree_Celsius",
+        "unit": "kg m-2 s-1",
         "attrs": {
-          "long_name": "Maximum temperature",
-          "short_name": "tmax",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "max"
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "step_type": "avg"
         },
         "shape": [
           1971,
@@ -397,32 +423,6 @@
           "short_name": "cpofp",
           "units": "percent",
           "comment": "Contains the value -50 when there is no precipitation.",
-          "step_type": "instant"
-        },
-        "shape": [
-          1971,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
           "step_type": "instant"
         },
         "shape": [
@@ -485,9 +485,9 @@
           1440
         ]
       },
-      "wind_u_100m": {
+      "wind_u_10m": {
         "type": "data",
-        "description": "100 metre U wind component",
+        "description": "10 metre U wind component",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -497,8 +497,8 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
           "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
@@ -564,9 +564,9 @@
           1440
         ]
       },
-      "wind_u_10m": {
+      "wind_u_100m": {
         "type": "data",
-        "description": "10 metre U wind component",
+        "description": "100 metre U wind component",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -576,8 +576,8 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
           "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
@@ -642,23 +642,6 @@
           1440
         ]
       },
-      "expected_forecast_length": {
-        "type": "auxiliary",
-        "description": "Expected forecast length",
-        "dimensions": [
-          "init_time"
-        ],
-        "attrs": {
-          "long_name": "Expected forecast length",
-          "statistics_approximate": {
-            "min": "0 days 00:00:00",
-            "max": "35 days 00:00:00"
-          }
-        },
-        "shape": [
-          1971
-        ]
-      },
       "ingested_forecast_length": {
         "type": "auxiliary",
         "description": "Ingested forecast length",
@@ -676,6 +659,23 @@
         "shape": [
           1971,
           31
+        ]
+      },
+      "expected_forecast_length": {
+        "type": "auxiliary",
+        "description": "Expected forecast length",
+        "dimensions": [
+          "init_time"
+        ],
+        "attrs": {
+          "long_name": "Expected forecast length",
+          "statistics_approximate": {
+            "min": "0 days 00:00:00",
+            "max": "35 days 00:00:00"
+          }
+        },
+        "shape": [
+          1971
         ]
       },
       "valid_time": {
