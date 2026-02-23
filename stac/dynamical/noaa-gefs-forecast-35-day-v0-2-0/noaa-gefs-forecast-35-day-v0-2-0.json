@@ -118,9 +118,9 @@
           1440
         ]
       },
-      "categorical_rain_surface": {
+      "categorical_snow_surface": {
         "type": "data",
-        "description": "Categorical rain",
+        "description": "Categorical snow",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -130,8 +130,8 @@
         ],
         "unit": "1",
         "attrs": {
-          "long_name": "Categorical rain",
-          "short_name": "crain",
+          "long_name": "Categorical snow",
+          "short_name": "csnow",
           "units": "1",
           "comment": "0=no; 1=yes",
           "step_type": "avg"
@@ -171,9 +171,9 @@
           1440
         ]
       },
-      "geopotential_height_cloud_ceiling": {
+      "categorical_rain_surface": {
         "type": "data",
-        "description": "Geopotential height",
+        "description": "Categorical rain",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -181,13 +181,13 @@
           "latitude",
           "longitude"
         ],
-        "unit": "m",
+        "unit": "1",
         "attrs": {
-          "long_name": "Geopotential height",
-          "short_name": "gh",
-          "standard_name": "geopotential_height",
-          "units": "m",
-          "step_type": "instant"
+          "long_name": "Categorical rain",
+          "short_name": "crain",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "avg"
         },
         "shape": [
           1971,
@@ -223,9 +223,9 @@
           1440
         ]
       },
-      "categorical_snow_surface": {
+      "geopotential_height_cloud_ceiling": {
         "type": "data",
-        "description": "Categorical snow",
+        "description": "Geopotential height",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -233,13 +233,13 @@
           "latitude",
           "longitude"
         ],
-        "unit": "1",
+        "unit": "m",
         "attrs": {
-          "long_name": "Categorical snow",
-          "short_name": "csnow",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "avg"
+          "long_name": "Geopotential height",
+          "short_name": "gh",
+          "standard_name": "geopotential_height",
+          "units": "m",
+          "step_type": "instant"
         },
         "shape": [
           1971,
@@ -590,32 +590,6 @@
           1440
         ]
       },
-      "wind_v_100m": {
-        "type": "data",
-        "description": "100 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          1971,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
       "wind_u_10m": {
         "type": "data",
         "description": "10 metre U wind component",
@@ -631,6 +605,32 @@
           "long_name": "10 metre U wind component",
           "short_name": "10u",
           "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          1971,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_v_100m": {
+        "type": "data",
+        "description": "100 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
+          "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
