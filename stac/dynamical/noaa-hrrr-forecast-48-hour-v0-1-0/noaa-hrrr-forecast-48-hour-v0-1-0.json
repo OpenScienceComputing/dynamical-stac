@@ -92,9 +92,9 @@
       }
     },
     "cube:variables": {
-      "categorical_freezing_rain_surface": {
+      "categorical_ice_pellets_surface": {
         "type": "data",
-        "description": "Categorical freezing rain",
+        "description": "Categorical ice pellets",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -103,8 +103,8 @@
         ],
         "unit": "1",
         "attrs": {
-          "long_name": "Categorical freezing rain",
-          "short_name": "cfrzr",
+          "long_name": "Categorical ice pellets",
+          "short_name": "cicep",
           "units": "1",
           "comment": "0=no; 1=yes",
           "step_type": "instant"
@@ -211,9 +211,9 @@
           1799
         ]
       },
-      "categorical_ice_pellets_surface": {
+      "categorical_freezing_rain_surface": {
         "type": "data",
-        "description": "Categorical ice pellets",
+        "description": "Categorical freezing rain",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -222,8 +222,8 @@
         ],
         "unit": "1",
         "attrs": {
-          "long_name": "Categorical ice pellets",
-          "short_name": "cicep",
+          "long_name": "Categorical freezing rain",
+          "short_name": "cfrzr",
           "units": "1",
           "comment": "0=no; 1=yes",
           "step_type": "instant"
@@ -307,6 +307,54 @@
           1799
         ]
       },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          11129,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          11129,
+          49,
+          1059,
+          1799
+        ]
+      },
       "percent_frozen_precipitation_surface": {
         "type": "data",
         "description": "Percent frozen precipitation",
@@ -355,81 +403,9 @@
           1799
         ]
       },
-      "pressure_reduced_to_mean_sea_level": {
+      "wind_v_80m": {
         "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          11129,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "relative_humidity_2m": {
-        "type": "data",
-        "description": "2 metre relative humidity",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          11129,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "total_cloud_cover_atmosphere": {
-        "type": "data",
-        "description": "Total Cloud Cover",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "Total Cloud Cover",
-          "short_name": "tcc",
-          "standard_name": "cloud_area_fraction",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          11129,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
+        "description": "80 metre V wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -438,9 +414,9 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
+          "long_name": "80 metre V wind component",
+          "short_name": "80v",
+          "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -475,21 +451,21 @@
           1799
         ]
       },
-      "precipitable_water_atmosphere": {
+      "wind_v_10m": {
         "type": "data",
-        "description": "Precipitable water",
+        "description": "10 metre V wind component",
         "dimensions": [
           "init_time",
           "lead_time",
           "y",
           "x"
         ],
-        "unit": "kg m-2",
+        "unit": "m s-1",
         "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
           "step_type": "instant"
         },
         "shape": [
@@ -523,21 +499,21 @@
           1799
         ]
       },
-      "wind_v_80m": {
+      "total_cloud_cover_atmosphere": {
         "type": "data",
-        "description": "80 metre V wind component",
+        "description": "Total Cloud Cover",
         "dimensions": [
           "init_time",
           "lead_time",
           "y",
           "x"
         ],
-        "unit": "m s-1",
+        "unit": "percent",
         "attrs": {
-          "long_name": "80 metre V wind component",
-          "short_name": "80v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
+          "long_name": "Total Cloud Cover",
+          "short_name": "tcc",
+          "standard_name": "cloud_area_fraction",
+          "units": "percent",
           "step_type": "instant"
         },
         "shape": [
@@ -547,9 +523,33 @@
           1799
         ]
       },
-      "wind_v_10m": {
+      "relative_humidity_2m": {
         "type": "data",
-        "description": "10 metre V wind component",
+        "description": "2 metre relative humidity",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          11129,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -558,9 +558,9 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -588,21 +588,21 @@
           11129
         ]
       },
-      "latitude": {
+      "longitude": {
         "type": "auxiliary",
-        "description": "Latitude",
+        "description": "Longitude",
         "dimensions": [
           "y",
           "x"
         ],
-        "unit": "degree_north",
+        "unit": "degree_east",
         "attrs": {
-          "long_name": "Latitude",
-          "standard_name": "latitude",
-          "units": "degree_north",
+          "long_name": "Longitude",
+          "standard_name": "longitude",
+          "units": "degree_east",
           "statistics_approximate": {
-            "min": 21.138123,
-            "max": 52.615653
+            "min": -134.09548,
+            "max": -60.917192
           }
         },
         "shape": [
@@ -627,21 +627,21 @@
           11129
         ]
       },
-      "longitude": {
+      "latitude": {
         "type": "auxiliary",
-        "description": "Longitude",
+        "description": "Latitude",
         "dimensions": [
           "y",
           "x"
         ],
-        "unit": "degree_east",
+        "unit": "degree_north",
         "attrs": {
-          "long_name": "Longitude",
-          "standard_name": "longitude",
-          "units": "degree_east",
+          "long_name": "Latitude",
+          "standard_name": "latitude",
+          "units": "degree_north",
           "statistics_approximate": {
-            "min": -134.09548,
-            "max": -60.917192
+            "min": 21.138123,
+            "max": 52.615653
           }
         },
         "shape": [
