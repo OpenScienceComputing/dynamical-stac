@@ -267,6 +267,28 @@
           1799
         ]
       },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "time",
+          "y",
+          "x"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          65226,
+          1059,
+          1799
+        ]
+      },
       "pressure_reduced_to_mean_sea_level": {
         "type": "data",
         "description": "Pressure reduced to MSL",
@@ -377,20 +399,42 @@
           1799
         ]
       },
-      "total_cloud_cover_atmosphere": {
+      "pressure_surface": {
         "type": "data",
-        "description": "Total Cloud Cover",
+        "description": "Surface pressure",
         "dimensions": [
           "time",
           "y",
           "x"
         ],
-        "unit": "percent",
+        "unit": "Pa",
         "attrs": {
-          "long_name": "Total Cloud Cover",
-          "short_name": "tcc",
-          "standard_name": "cloud_area_fraction",
-          "units": "percent",
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          65226,
+          1059,
+          1799
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
+        "dimensions": [
+          "time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
           "step_type": "instant"
         },
         "shape": [
@@ -421,50 +465,6 @@
           1799
         ]
       },
-      "precipitable_water_atmosphere": {
-        "type": "data",
-        "description": "Precipitable water",
-        "dimensions": [
-          "time",
-          "y",
-          "x"
-        ],
-        "unit": "kg m-2",
-        "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          65226,
-          1059,
-          1799
-        ]
-      },
-      "pressure_surface": {
-        "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "time",
-          "y",
-          "x"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          65226,
-          1059,
-          1799
-        ]
-      },
       "wind_v_10m": {
         "type": "data",
         "description": "10 metre V wind component",
@@ -478,28 +478,6 @@
           "long_name": "10 metre V wind component",
           "short_name": "10v",
           "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          65226,
-          1059,
-          1799
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -531,6 +509,28 @@
           1799
         ]
       },
+      "total_cloud_cover_atmosphere": {
+        "type": "data",
+        "description": "Total Cloud Cover",
+        "dimensions": [
+          "time",
+          "y",
+          "x"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "Total Cloud Cover",
+          "short_name": "tcc",
+          "standard_name": "cloud_area_fraction",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          65226,
+          1059,
+          1799
+        ]
+      },
       "latitude": {
         "type": "auxiliary",
         "description": "Latitude",
@@ -546,6 +546,28 @@
           "statistics_approximate": {
             "min": 21.138123,
             "max": 52.615653
+          }
+        },
+        "shape": [
+          1059,
+          1799
+        ]
+      },
+      "longitude": {
+        "type": "auxiliary",
+        "description": "Longitude",
+        "dimensions": [
+          "y",
+          "x"
+        ],
+        "unit": "degree_east",
+        "attrs": {
+          "long_name": "Longitude",
+          "standard_name": "longitude",
+          "units": "degree_east",
+          "statistics_approximate": {
+            "min": -134.09548,
+            "max": -60.917192
           }
         },
         "shape": [
@@ -580,28 +602,6 @@
           ]
         },
         "shape": []
-      },
-      "longitude": {
-        "type": "auxiliary",
-        "description": "Longitude",
-        "dimensions": [
-          "y",
-          "x"
-        ],
-        "unit": "degree_east",
-        "attrs": {
-          "long_name": "Longitude",
-          "standard_name": "longitude",
-          "units": "degree_east",
-          "statistics_approximate": {
-            "min": -134.09548,
-            "max": -60.917192
-          }
-        },
-        "shape": [
-          1059,
-          1799
-        ]
       }
     },
     "datetime": null

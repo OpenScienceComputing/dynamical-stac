@@ -249,6 +249,32 @@
           1440
         ]
       },
+      "minimum_temperature_2m": {
+        "type": "data",
+        "description": "Minimum temperature",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "Minimum temperature",
+          "short_name": "tmin",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "min"
+        },
+        "shape": [
+          1972,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
       "downward_short_wave_radiation_flux_surface": {
         "type": "data",
         "description": "Surface downward short-wave radiation flux",
@@ -276,6 +302,32 @@
           1440
         ]
       },
+      "percent_frozen_precipitation_surface": {
+        "type": "data",
+        "description": "Percent frozen precipitation",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "Percent frozen precipitation",
+          "short_name": "cpofp",
+          "units": "percent",
+          "comment": "Contains the value -50 when there is no precipitation.",
+          "step_type": "instant"
+        },
+        "shape": [
+          1972,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
       "maximum_temperature_2m": {
         "type": "data",
         "description": "Maximum temperature",
@@ -293,33 +345,6 @@
           "standard_name": "air_temperature",
           "units": "degree_Celsius",
           "step_type": "max"
-        },
-        "shape": [
-          1972,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "total_cloud_cover_atmosphere": {
-        "type": "data",
-        "description": "Total Cloud Cover",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "Total Cloud Cover",
-          "short_name": "tcc",
-          "standard_name": "cloud_area_fraction",
-          "units": "percent",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
-          "step_type": "avg"
         },
         "shape": [
           1972,
@@ -407,9 +432,9 @@
           1440
         ]
       },
-      "percent_frozen_precipitation_surface": {
+      "precipitation_surface": {
         "type": "data",
-        "description": "Percent frozen precipitation",
+        "description": "Precipitation rate",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -417,12 +442,39 @@
           "latitude",
           "longitude"
         ],
-        "unit": "percent",
+        "unit": "kg m-2 s-1",
         "attrs": {
-          "long_name": "Percent frozen precipitation",
-          "short_name": "cpofp",
-          "units": "percent",
-          "comment": "Contains the value -50 when there is no precipitation.",
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "step_type": "avg"
+        },
+        "shape": [
+          1972,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "pressure_surface": {
+        "type": "data",
+        "description": "Surface pressure",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
           "step_type": "instant"
         },
         "shape": [
@@ -459,9 +511,9 @@
           1440
         ]
       },
-      "minimum_temperature_2m": {
+      "total_cloud_cover_atmosphere": {
         "type": "data",
-        "description": "Minimum temperature",
+        "description": "Total Cloud Cover",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -469,13 +521,14 @@
           "latitude",
           "longitude"
         ],
-        "unit": "degree_Celsius",
+        "unit": "percent",
         "attrs": {
-          "long_name": "Minimum temperature",
-          "short_name": "tmin",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "min"
+          "long_name": "Total Cloud Cover",
+          "short_name": "tcc",
+          "standard_name": "cloud_area_fraction",
+          "units": "percent",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
+          "step_type": "avg"
         },
         "shape": [
           1972,
@@ -485,35 +538,9 @@
           1440
         ]
       },
-      "pressure_surface": {
+      "wind_v_100m": {
         "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          1972,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "wind_u_100m": {
-        "type": "data",
-        "description": "100 metre U wind component",
+        "description": "100 metre V wind component",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -523,9 +550,9 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
-          "standard_name": "eastward_wind",
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
+          "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -551,32 +578,6 @@
         "attrs": {
           "long_name": "10 metre V wind component",
           "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          1972,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "wind_v_100m": {
-        "type": "data",
-        "description": "100 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
           "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
@@ -615,9 +616,9 @@
           1440
         ]
       },
-      "precipitation_surface": {
+      "wind_u_100m": {
         "type": "data",
-        "description": "Precipitation rate",
+        "description": "100 metre U wind component",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -625,14 +626,13 @@
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2 s-1",
+        "unit": "m s-1",
         "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
-          "step_type": "avg"
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
         },
         "shape": [
           1972,

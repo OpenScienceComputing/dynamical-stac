@@ -114,9 +114,9 @@
           1440
         ]
       },
-      "categorical_rain_surface": {
+      "categorical_ice_pellets_surface": {
         "type": "data",
-        "description": "Categorical rain",
+        "description": "Categorical ice pellets",
         "dimensions": [
           "time",
           "latitude",
@@ -124,8 +124,8 @@
         ],
         "unit": "1",
         "attrs": {
-          "long_name": "Categorical rain",
-          "short_name": "crain",
+          "long_name": "Categorical ice pellets",
+          "short_name": "cicep",
           "units": "1",
           "comment": "0=no; 1=yes",
           "step_type": "avg"
@@ -181,21 +181,20 @@
           1440
         ]
       },
-      "precipitation_surface": {
+      "categorical_rain_surface": {
         "type": "data",
-        "description": "Precipitation rate",
+        "description": "Categorical rain",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2 s-1",
+        "unit": "1",
         "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "long_name": "Categorical rain",
+          "short_name": "crain",
+          "units": "1",
+          "comment": "0=no; 1=yes",
           "step_type": "avg"
         },
         "shape": [
@@ -226,21 +225,22 @@
           1440
         ]
       },
-      "percent_frozen_precipitation_surface": {
+      "downward_short_wave_radiation_flux_surface": {
         "type": "data",
-        "description": "Percent frozen precipitation",
+        "description": "Surface downward short-wave radiation flux",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "percent",
+        "unit": "W m-2",
         "attrs": {
-          "long_name": "Percent frozen precipitation",
-          "short_name": "cpofp",
-          "units": "percent",
-          "comment": "Contains the value -50 when there is no precipitation.",
-          "step_type": "instant"
+          "long_name": "Surface downward short-wave radiation flux",
+          "short_name": "sdswrf",
+          "standard_name": "surface_downwelling_shortwave_flux_in_air",
+          "units": "W m-2",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
+          "step_type": "avg"
         },
         "shape": [
           76406,
@@ -270,20 +270,21 @@
           1440
         ]
       },
-      "categorical_ice_pellets_surface": {
+      "precipitation_surface": {
         "type": "data",
-        "description": "Categorical ice pellets",
+        "description": "Precipitation rate",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "1",
+        "unit": "kg m-2 s-1",
         "attrs": {
-          "long_name": "Categorical ice pellets",
-          "short_name": "cicep",
-          "units": "1",
-          "comment": "0=no; 1=yes",
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
           "step_type": "avg"
         },
         "shape": [
@@ -292,9 +293,9 @@
           1440
         ]
       },
-      "pressure_reduced_to_mean_sea_level": {
+      "pressure_surface": {
         "type": "data",
-        "description": "Pressure reduced to MSL",
+        "description": "Surface pressure",
         "dimensions": [
           "time",
           "latitude",
@@ -302,32 +303,10 @@
         ],
         "unit": "Pa",
         "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
           "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          76406,
-          721,
-          1440
-        ]
-      },
-      "relative_humidity_2m": {
-        "type": "data",
-        "description": "2 metre relative humidity",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
           "step_type": "instant"
         },
         "shape": [
@@ -358,6 +337,50 @@
           1440
         ]
       },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          76406,
+          721,
+          1440
+        ]
+      },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          76406,
+          721,
+          1440
+        ]
+      },
       "maximum_temperature_2m": {
         "type": "data",
         "description": "Maximum temperature",
@@ -380,43 +403,20 @@
           1440
         ]
       },
-      "downward_short_wave_radiation_flux_surface": {
+      "relative_humidity_2m": {
         "type": "data",
-        "description": "Surface downward short-wave radiation flux",
+        "description": "2 metre relative humidity",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "W m-2",
+        "unit": "percent",
         "attrs": {
-          "long_name": "Surface downward short-wave radiation flux",
-          "short_name": "sdswrf",
-          "standard_name": "surface_downwelling_shortwave_flux_in_air",
-          "units": "W m-2",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
-          "step_type": "avg"
-        },
-        "shape": [
-          76406,
-          721,
-          1440
-        ]
-      },
-      "pressure_surface": {
-        "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
           "step_type": "instant"
         },
         "shape": [
@@ -514,20 +514,20 @@
           1440
         ]
       },
-      "precipitable_water_atmosphere": {
+      "percent_frozen_precipitation_surface": {
         "type": "data",
-        "description": "Precipitable water",
+        "description": "Percent frozen precipitation",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2",
+        "unit": "percent",
         "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
+          "long_name": "Percent frozen precipitation",
+          "short_name": "cpofp",
+          "units": "percent",
+          "comment": "Contains the value -50 when there is no precipitation.",
           "step_type": "instant"
         },
         "shape": [
