@@ -118,32 +118,6 @@
           1440
         ]
       },
-      "dew_point_temperature_2m": {
-        "type": "data",
-        "description": "2 metre dewpoint temperature",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "2 metre dewpoint temperature",
-          "short_name": "2d",
-          "standard_name": "dew_point_temperature",
-          "units": "degree_Celsius",
-          "step_type": "instant"
-        },
-        "shape": [
-          694,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
       "downward_long_wave_radiation_flux_surface": {
         "type": "data",
         "description": "Surface downward long-wave radiation flux",
@@ -159,6 +133,32 @@
           "long_name": "Surface downward long-wave radiation flux",
           "short_name": "sdlwrf",
           "standard_name": "surface_downwelling_longwave_flux_in_air",
+          "units": "W m-2",
+          "step_type": "avg"
+        },
+        "shape": [
+          694,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
+      "downward_short_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward short-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward short-wave radiation flux",
+          "short_name": "sdswrf",
+          "standard_name": "surface_downwelling_shortwave_flux_in_air",
           "units": "W m-2",
           "step_type": "avg"
         },
@@ -196,9 +196,9 @@
           1440
         ]
       },
-      "downward_short_wave_radiation_flux_surface": {
+      "dew_point_temperature_2m": {
         "type": "data",
-        "description": "Surface downward short-wave radiation flux",
+        "description": "2 metre dewpoint temperature",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -206,13 +206,13 @@
           "latitude",
           "longitude"
         ],
-        "unit": "W m-2",
+        "unit": "degree_Celsius",
         "attrs": {
-          "long_name": "Surface downward short-wave radiation flux",
-          "short_name": "sdswrf",
-          "standard_name": "surface_downwelling_shortwave_flux_in_air",
-          "units": "W m-2",
-          "step_type": "avg"
+          "long_name": "2 metre dewpoint temperature",
+          "short_name": "2d",
+          "standard_name": "dew_point_temperature",
+          "units": "degree_Celsius",
+          "step_type": "instant"
         },
         "shape": [
           694,
@@ -249,9 +249,9 @@
           1440
         ]
       },
-      "pressure_surface": {
+      "wind_v_100m": {
         "type": "data",
-        "description": "Surface pressure",
+        "description": "100 metre V wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -259,38 +259,12 @@
           "latitude",
           "longitude"
         ],
-        "unit": "Pa",
+        "unit": "m s-1",
         "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          694,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
           "step_type": "instant"
         },
         "shape": [
@@ -353,9 +327,9 @@
           1440
         ]
       },
-      "wind_v_10m": {
+      "pressure_surface": {
         "type": "data",
-        "description": "10 metre V wind component",
+        "description": "Surface pressure",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -363,12 +337,38 @@
           "latitude",
           "longitude"
         ],
-        "unit": "m s-1",
+        "unit": "Pa",
         "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          694,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
           "step_type": "instant"
         },
         "shape": [
@@ -405,9 +405,9 @@
           1440
         ]
       },
-      "wind_v_100m": {
+      "wind_v_10m": {
         "type": "data",
-        "description": "100 metre V wind component",
+        "description": "10 metre V wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -417,8 +417,8 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
           "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
@@ -429,6 +429,23 @@
           51,
           721,
           1440
+        ]
+      },
+      "ingested_forecast_length": {
+        "type": "auxiliary",
+        "description": "Ingested forecast length",
+        "dimensions": [
+          "init_time"
+        ],
+        "attrs": {
+          "long_name": "Ingested forecast length",
+          "statistics_approximate": {
+            "min": "0 days 00:00:00",
+            "max": "15 days 00:00:00"
+          }
+        },
+        "shape": [
+          694
         ]
       },
       "valid_time": {
@@ -459,23 +476,6 @@
         ],
         "attrs": {
           "long_name": "Expected forecast length",
-          "statistics_approximate": {
-            "min": "0 days 00:00:00",
-            "max": "15 days 00:00:00"
-          }
-        },
-        "shape": [
-          694
-        ]
-      },
-      "ingested_forecast_length": {
-        "type": "auxiliary",
-        "description": "Ingested forecast length",
-        "dimensions": [
-          "init_time"
-        ],
-        "attrs": {
-          "long_name": "Ingested forecast length",
           "statistics_approximate": {
             "min": "0 days 00:00:00",
             "max": "15 days 00:00:00"
