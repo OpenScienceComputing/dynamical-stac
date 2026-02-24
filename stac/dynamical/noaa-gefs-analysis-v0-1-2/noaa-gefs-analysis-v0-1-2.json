@@ -57,12 +57,12 @@
       }
     ],
     "start_datetime": "2000-01-01T00:00:00Z",
-    "end_datetime": "2026-02-24T09:00:00Z",
+    "end_datetime": "2026-02-24T15:00:00Z",
     "cube:dimensions": {
       "time": {
         "extent": [
           "2000-01-01T00:00:00Z",
-          "2026-02-24T09:00:00Z"
+          "2026-02-24T15:00:00Z"
         ],
         "description": "Time",
         "step": "P0DT3H0M0S",
@@ -109,7 +109,7 @@
           "step_type": "avg"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -131,7 +131,7 @@
           "step_type": "avg"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -154,7 +154,7 @@
           "step_type": "avg"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -176,7 +176,7 @@
           "step_type": "instant"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -198,7 +198,7 @@
           "step_type": "avg"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -220,7 +220,7 @@
           "step_type": "avg"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -243,117 +243,7 @@
           "step_type": "avg"
         },
         "shape": [
-          76412,
-          721,
-          1440
-        ]
-      },
-      "percent_frozen_precipitation_surface": {
-        "type": "data",
-        "description": "Percent frozen precipitation",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "Percent frozen precipitation",
-          "short_name": "cpofp",
-          "units": "percent",
-          "comment": "Contains the value -50 when there is no precipitation.",
-          "step_type": "instant"
-        },
-        "shape": [
-          76412,
-          721,
-          1440
-        ]
-      },
-      "precipitable_water_atmosphere": {
-        "type": "data",
-        "description": "Precipitable water",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "kg m-2",
-        "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          76412,
-          721,
-          1440
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          76412,
-          721,
-          1440
-        ]
-      },
-      "relative_humidity_2m": {
-        "type": "data",
-        "description": "2 metre relative humidity",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          76412,
-          721,
-          1440
-        ]
-      },
-      "maximum_temperature_2m": {
-        "type": "data",
-        "description": "Maximum temperature",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "Maximum temperature",
-          "short_name": "tmax",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "max"
-        },
-        "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -375,7 +265,7 @@
           "step_type": "instant"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -398,7 +288,7 @@
           "step_type": "avg"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -420,7 +310,117 @@
           "step_type": "instant"
         },
         "shape": [
-          76412,
+          76414,
+          721,
+          1440
+        ]
+      },
+      "minimum_temperature_2m": {
+        "type": "data",
+        "description": "Minimum temperature",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "Minimum temperature",
+          "short_name": "tmin",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "min"
+        },
+        "shape": [
+          76414,
+          721,
+          1440
+        ]
+      },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          76414,
+          721,
+          1440
+        ]
+      },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          76414,
+          721,
+          1440
+        ]
+      },
+      "maximum_temperature_2m": {
+        "type": "data",
+        "description": "Maximum temperature",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "Maximum temperature",
+          "short_name": "tmax",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "max"
+        },
+        "shape": [
+          76414,
+          721,
+          1440
+        ]
+      },
+      "relative_humidity_2m": {
+        "type": "data",
+        "description": "2 metre relative humidity",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          76414,
           721,
           1440
         ]
@@ -443,51 +443,7 @@
           "step_type": "avg"
         },
         "shape": [
-          76412,
-          721,
-          1440
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          76412,
-          721,
-          1440
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -509,7 +465,7 @@
           "step_type": "instant"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
@@ -531,29 +487,73 @@
           "step_type": "instant"
         },
         "shape": [
-          76412,
+          76414,
           721,
           1440
         ]
       },
-      "minimum_temperature_2m": {
+      "percent_frozen_precipitation_surface": {
         "type": "data",
-        "description": "Minimum temperature",
+        "description": "Percent frozen precipitation",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "degree_Celsius",
+        "unit": "percent",
         "attrs": {
-          "long_name": "Minimum temperature",
-          "short_name": "tmin",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "min"
+          "long_name": "Percent frozen precipitation",
+          "short_name": "cpofp",
+          "units": "percent",
+          "comment": "Contains the value -50 when there is no precipitation.",
+          "step_type": "instant"
         },
         "shape": [
-          76412,
+          76414,
+          721,
+          1440
+        ]
+      },
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          76414,
+          721,
+          1440
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          76414,
           721,
           1440
         ]
@@ -593,14 +593,14 @@
     }
   ],
   "assets": {
-    "noaa@FXK2JHZ694B1S4KSAKFG": {
+    "noaa@JB200TF6W47B00RT50S0": {
       "href": "s3://dynamical-noaa-gefs/noaa-gefs-analysis/v0.1.2.icechunk/",
       "type": "application/vnd.zarr+icechunk",
       "title": "NOAA GEFS - dynamical.org Icechunk Zarr",
       "zarr:consolidated": false,
       "zarr:zarr_format": 3,
-      "icechunk:snapshot_id": "FXK2JHZ694B1S4KSAKFG",
-      "version": "FXK2JHZ694B1S4KSAKFG",
+      "icechunk:snapshot_id": "JB200TF6W47B00RT50S0",
+      "version": "JB200TF6W47B00RT50S0",
       "storage:refs": [
         "aws-s3-dynamical-noaa-gefs"
       ],
