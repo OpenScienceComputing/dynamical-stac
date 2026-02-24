@@ -57,12 +57,12 @@
       }
     ],
     "start_datetime": "2024-04-01T00:00:00Z",
-    "end_datetime": "2026-02-23T00:00:00Z",
+    "end_datetime": "2026-02-24T00:00:00Z",
     "cube:dimensions": {
       "init_time": {
         "extent": [
           "2024-04-01T00:00:00Z",
-          "2026-02-23T00:00:00Z"
+          "2026-02-24T00:00:00Z"
         ],
         "description": "Forecast initialization time",
         "step": "P1DT0H0M0S",
@@ -111,7 +111,7 @@
           "step_type": "instant"
         },
         "shape": [
-          694,
+          695,
           85,
           51,
           721,
@@ -137,7 +137,7 @@
           "step_type": "instant"
         },
         "shape": [
-          694,
+          695,
           85,
           51,
           721,
@@ -163,7 +163,7 @@
           "step_type": "instant"
         },
         "shape": [
-          694,
+          695,
           85,
           51,
           721,
@@ -189,7 +189,7 @@
           "step_type": "avg"
         },
         "shape": [
-          694,
+          695,
           85,
           51,
           721,
@@ -216,85 +216,7 @@
           "step_type": "avg"
         },
         "shape": [
-          694,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          694,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "downward_short_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward short-wave radiation flux",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward short-wave radiation flux",
-          "short_name": "sdswrf",
-          "standard_name": "surface_downwelling_shortwave_flux_in_air",
-          "units": "W m-2",
-          "step_type": "avg"
-        },
-        "shape": [
-          694,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          694,
+          695,
           85,
           51,
           721,
@@ -320,16 +242,16 @@
           "step_type": "instant"
         },
         "shape": [
-          694,
+          695,
           85,
           51,
           721,
           1440
         ]
       },
-      "wind_u_100m": {
+      "pressure_reduced_to_mean_sea_level": {
         "type": "data",
-        "description": "100 metre U wind component",
+        "description": "Pressure reduced to MSL",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -337,25 +259,25 @@
           "latitude",
           "longitude"
         ],
-        "unit": "m s-1",
+        "unit": "Pa",
         "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
           "step_type": "instant"
         },
         "shape": [
-          694,
+          695,
           85,
           51,
           721,
           1440
         ]
       },
-      "wind_v_100m": {
+      "downward_short_wave_radiation_flux_surface": {
         "type": "data",
-        "description": "100 metre V wind component",
+        "description": "Surface downward short-wave radiation flux",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -363,42 +285,16 @@
           "latitude",
           "longitude"
         ],
-        "unit": "m s-1",
+        "unit": "W m-2",
         "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
+          "long_name": "Surface downward short-wave radiation flux",
+          "short_name": "sdswrf",
+          "standard_name": "surface_downwelling_shortwave_flux_in_air",
+          "units": "W m-2",
+          "step_type": "avg"
         },
         "shape": [
-          694,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          694,
+          695,
           85,
           51,
           721,
@@ -424,28 +320,115 @@
           "step_type": "instant"
         },
         "shape": [
-          694,
+          695,
           85,
           51,
           721,
           1440
         ]
       },
-      "ingested_forecast_length": {
-        "type": "auxiliary",
-        "description": "Ingested forecast length",
+      "wind_u_100m": {
+        "type": "data",
+        "description": "100 metre U wind component",
         "dimensions": [
-          "init_time"
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
         ],
+        "unit": "m s-1",
         "attrs": {
-          "long_name": "Ingested forecast length",
-          "statistics_approximate": {
-            "min": "0 days 00:00:00",
-            "max": "15 days 00:00:00"
-          }
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
         },
         "shape": [
-          694
+          695,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
+      "wind_v_100m": {
+        "type": "data",
+        "description": "100 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          695,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          695,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          695,
+          85,
+          51,
+          721,
+          1440
         ]
       },
       "expected_forecast_length": {
@@ -462,7 +445,24 @@
           }
         },
         "shape": [
-          694
+          695
+        ]
+      },
+      "ingested_forecast_length": {
+        "type": "auxiliary",
+        "description": "Ingested forecast length",
+        "dimensions": [
+          "init_time"
+        ],
+        "attrs": {
+          "long_name": "Ingested forecast length",
+          "statistics_approximate": {
+            "min": "0 days 00:00:00",
+            "max": "15 days 00:00:00"
+          }
+        },
+        "shape": [
+          695
         ]
       },
       "spatial_ref": {
@@ -500,7 +500,7 @@
           }
         },
         "shape": [
-          694,
+          695,
           85
         ]
       }
@@ -520,14 +520,14 @@
     }
   ],
   "assets": {
-    "ecmwf@DVMN525M2X1WX5MRZHPG": {
+    "ecmwf@TYG31VQYP055Y0ADGP10": {
       "href": "s3://dynamical-ecmwf-ifs-ens/ecmwf-ifs-ens-forecast-15-day-0-25-degree/v0.1.0.icechunk/",
       "type": "application/vnd.zarr+icechunk",
       "title": "ECMWF IFS ENS - dynamical.org Icechunk Zarr",
       "zarr:consolidated": false,
       "zarr:zarr_format": 3,
-      "icechunk:snapshot_id": "DVMN525M2X1WX5MRZHPG",
-      "version": "DVMN525M2X1WX5MRZHPG",
+      "icechunk:snapshot_id": "TYG31VQYP055Y0ADGP10",
+      "version": "TYG31VQYP055Y0ADGP10",
       "storage:refs": [
         "aws-s3-dynamical-ecmwf-ifs-ens"
       ],
