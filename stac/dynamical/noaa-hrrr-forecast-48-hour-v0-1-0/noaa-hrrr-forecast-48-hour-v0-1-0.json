@@ -57,12 +57,12 @@
       }
     ],
     "start_datetime": "2018-07-13T12:00:00Z",
-    "end_datetime": "2026-02-24T00:00:00Z",
+    "end_datetime": "2026-02-24T06:00:00Z",
     "cube:dimensions": {
       "init_time": {
         "extent": [
           "2018-07-13T12:00:00Z",
-          "2026-02-24T00:00:00Z"
+          "2026-02-24T06:00:00Z"
         ],
         "description": "Forecast initialization time",
         "step": "P0DT6H0M0S",
@@ -110,7 +110,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -134,7 +134,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -157,7 +157,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -181,7 +181,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -205,7 +205,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -229,7 +229,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -253,55 +253,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "downward_long_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward long-wave radiation flux",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward long-wave radiation flux",
-          "short_name": "sdlwrf",
-          "standard_name": "surface_downwelling_longwave_flux_in_air",
-          "units": "W m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          11131,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "pressure_surface": {
-        "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -324,7 +276,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -349,7 +301,7 @@
           "step_type": "avg"
         },
         "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -373,127 +325,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "precipitable_water_atmosphere": {
-        "type": "data",
-        "description": "Precipitable water",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "kg m-2",
-        "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          11131,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "temperature_2m": {
-        "type": "data",
-        "description": "2 metre temperature",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "2 metre temperature",
-          "short_name": "2t",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "instant"
-        },
-        "shape": [
-          11131,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "relative_humidity_2m": {
-        "type": "data",
-        "description": "2 metre relative humidity",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          11131,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          11131,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_v_80m": {
-        "type": "data",
-        "description": "80 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "80 metre V wind component",
-          "short_name": "80v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -517,7 +349,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
           49,
           1059,
           1799
@@ -541,7 +373,31 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "pressure_surface": {
+        "type": "data",
+        "description": "Surface pressure",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          11132,
           49,
           1059,
           1799
@@ -565,7 +421,151 @@
           "step_type": "instant"
         },
         "shape": [
-          11131,
+          11132,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          11132,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "relative_humidity_2m": {
+        "type": "data",
+        "description": "2 metre relative humidity",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          11132,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "downward_long_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward long-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward long-wave radiation flux",
+          "short_name": "sdlwrf",
+          "standard_name": "surface_downwelling_longwave_flux_in_air",
+          "units": "W m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          11132,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "temperature_2m": {
+        "type": "data",
+        "description": "2 metre temperature",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "2 metre temperature",
+          "short_name": "2t",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "instant"
+        },
+        "shape": [
+          11132,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          11132,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "wind_v_80m": {
+        "type": "data",
+        "description": "80 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "80 metre V wind component",
+          "short_name": "80v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          11132,
           49,
           1059,
           1799
@@ -585,7 +585,7 @@
           }
         },
         "shape": [
-          11131
+          11132
         ]
       },
       "ingested_forecast_length": {
@@ -602,8 +602,56 @@
           }
         },
         "shape": [
-          11131
+          11132
         ]
+      },
+      "valid_time": {
+        "type": "auxiliary",
+        "description": "Valid time",
+        "dimensions": [
+          "init_time",
+          "lead_time"
+        ],
+        "attrs": {
+          "long_name": "Valid time",
+          "standard_name": "time",
+          "statistics_approximate": {
+            "min": "2018-07-13T12:00:00",
+            "max": "Present + 48 hours"
+          }
+        },
+        "shape": [
+          11132,
+          49
+        ]
+      },
+      "spatial_ref": {
+        "type": "auxiliary",
+        "dimensions": [],
+        "attrs": {
+          "crs_wkt": "PROJCS[\"unnamed\",GEOGCS[\"Coordinate System imported from GRIB file\",DATUM[\"unnamed\",SPHEROID[\"Sphere\",6371229,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",38.5],PARAMETER[\"central_meridian\",-97.5],PARAMETER[\"standard_parallel_1\",38.5],PARAMETER[\"standard_parallel_2\",38.5],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"Metre\",1],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+          "semi_major_axis": 6371229.0,
+          "semi_minor_axis": 6371229.0,
+          "inverse_flattening": 0.0,
+          "reference_ellipsoid_name": "Sphere",
+          "longitude_of_prime_meridian": 0.0,
+          "prime_meridian_name": "Greenwich",
+          "geographic_crs_name": "Coordinate System imported from GRIB file",
+          "horizontal_datum_name": "unnamed",
+          "grid_mapping_name": "lambert_conformal_conic",
+          "spatial_ref": "PROJCS[\"unnamed\",GEOGCS[\"Coordinate System imported from GRIB file\",DATUM[\"unnamed\",SPHEROID[\"Sphere\",6371229,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",38.5],PARAMETER[\"central_meridian\",-97.5],PARAMETER[\"standard_parallel_1\",38.5],PARAMETER[\"standard_parallel_2\",38.5],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"Metre\",1],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+          "GeoTransform": "-2699020.142521929 3000.0 0.0 1588193.847443335 0.0 -3000.0",
+          "false_easting": 0.0,
+          "false_northing": 0.0,
+          "latitude_of_projection_origin": 38.5,
+          "longitude_of_central_meridian": -97.5,
+          "projected_crs_name": "unnamed",
+          "standard_parallel": [
+            38.5,
+            38.5
+          ]
+        },
+        "shape": []
       },
       "latitude": {
         "type": "auxiliary",
@@ -648,54 +696,6 @@
           1059,
           1799
         ]
-      },
-      "valid_time": {
-        "type": "auxiliary",
-        "description": "Valid time",
-        "dimensions": [
-          "init_time",
-          "lead_time"
-        ],
-        "attrs": {
-          "long_name": "Valid time",
-          "standard_name": "time",
-          "statistics_approximate": {
-            "min": "2018-07-13T12:00:00",
-            "max": "Present + 48 hours"
-          }
-        },
-        "shape": [
-          11131,
-          49
-        ]
-      },
-      "spatial_ref": {
-        "type": "auxiliary",
-        "dimensions": [],
-        "attrs": {
-          "crs_wkt": "PROJCS[\"unnamed\",GEOGCS[\"Coordinate System imported from GRIB file\",DATUM[\"unnamed\",SPHEROID[\"Sphere\",6371229,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",38.5],PARAMETER[\"central_meridian\",-97.5],PARAMETER[\"standard_parallel_1\",38.5],PARAMETER[\"standard_parallel_2\",38.5],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"Metre\",1],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
-          "semi_major_axis": 6371229.0,
-          "semi_minor_axis": 6371229.0,
-          "inverse_flattening": 0.0,
-          "reference_ellipsoid_name": "Sphere",
-          "longitude_of_prime_meridian": 0.0,
-          "prime_meridian_name": "Greenwich",
-          "geographic_crs_name": "Coordinate System imported from GRIB file",
-          "horizontal_datum_name": "unnamed",
-          "grid_mapping_name": "lambert_conformal_conic",
-          "spatial_ref": "PROJCS[\"unnamed\",GEOGCS[\"Coordinate System imported from GRIB file\",DATUM[\"unnamed\",SPHEROID[\"Sphere\",6371229,0]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Lambert_Conformal_Conic_2SP\"],PARAMETER[\"latitude_of_origin\",38.5],PARAMETER[\"central_meridian\",-97.5],PARAMETER[\"standard_parallel_1\",38.5],PARAMETER[\"standard_parallel_2\",38.5],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"Metre\",1],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
-          "GeoTransform": "-2699020.142521929 3000.0 0.0 1588193.847443335 0.0 -3000.0",
-          "false_easting": 0.0,
-          "false_northing": 0.0,
-          "latitude_of_projection_origin": 38.5,
-          "longitude_of_central_meridian": -97.5,
-          "projected_crs_name": "unnamed",
-          "standard_parallel": [
-            38.5,
-            38.5
-          ]
-        },
-        "shape": []
       }
     },
     "datetime": null
@@ -713,14 +713,14 @@
     }
   ],
   "assets": {
-    "noaa@NYDGVZ1TA3GWC4TZB7M0": {
+    "noaa@75D8ZGNS31C12AAE0140": {
       "href": "s3://dynamical-noaa-hrrr/noaa-hrrr-forecast-48-hour/v0.1.0.icechunk/",
       "type": "application/vnd.zarr+icechunk",
       "title": "NOAA HRRR - dynamical.org Icechunk Zarr",
       "zarr:consolidated": false,
       "zarr:zarr_format": 3,
-      "icechunk:snapshot_id": "NYDGVZ1TA3GWC4TZB7M0",
-      "version": "NYDGVZ1TA3GWC4TZB7M0",
+      "icechunk:snapshot_id": "75D8ZGNS31C12AAE0140",
+      "version": "75D8ZGNS31C12AAE0140",
       "storage:refs": [
         "aws-s3-dynamical-noaa-hrrr"
       ],
