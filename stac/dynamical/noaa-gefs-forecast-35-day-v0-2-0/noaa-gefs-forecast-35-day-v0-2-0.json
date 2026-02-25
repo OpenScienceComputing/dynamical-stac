@@ -118,9 +118,9 @@
           1440
         ]
       },
-      "categorical_ice_pellets_surface": {
+      "categorical_rain_surface": {
         "type": "data",
-        "description": "Categorical ice pellets",
+        "description": "Categorical rain",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -130,8 +130,8 @@
         ],
         "unit": "1",
         "attrs": {
-          "long_name": "Categorical ice pellets",
-          "short_name": "cicep",
+          "long_name": "Categorical rain",
+          "short_name": "crain",
           "units": "1",
           "comment": "0=no; 1=yes",
           "step_type": "avg"
@@ -171,9 +171,9 @@
           1440
         ]
       },
-      "downward_short_wave_radiation_flux_surface": {
+      "geopotential_height_cloud_ceiling": {
         "type": "data",
-        "description": "Surface downward short-wave radiation flux",
+        "description": "Geopotential height",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -181,13 +181,38 @@
           "latitude",
           "longitude"
         ],
-        "unit": "W m-2",
+        "unit": "m",
         "attrs": {
-          "long_name": "Surface downward short-wave radiation flux",
-          "short_name": "sdswrf",
-          "standard_name": "surface_downwelling_shortwave_flux_in_air",
-          "units": "W m-2",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
+          "long_name": "Geopotential height",
+          "short_name": "gh",
+          "standard_name": "geopotential_height",
+          "units": "m",
+          "step_type": "instant"
+        },
+        "shape": [
+          1973,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "categorical_ice_pellets_surface": {
+        "type": "data",
+        "description": "Categorical ice pellets",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical ice pellets",
+          "short_name": "cicep",
+          "units": "1",
+          "comment": "0=no; 1=yes",
           "step_type": "avg"
         },
         "shape": [
@@ -214,6 +239,33 @@
           "short_name": "csnow",
           "units": "1",
           "comment": "0=no; 1=yes",
+          "step_type": "avg"
+        },
+        "shape": [
+          1973,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "downward_short_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward short-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward short-wave radiation flux",
+          "short_name": "sdswrf",
+          "standard_name": "surface_downwelling_shortwave_flux_in_air",
+          "units": "W m-2",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
           "step_type": "avg"
         },
         "shape": [
@@ -251,32 +303,6 @@
           1440
         ]
       },
-      "geopotential_height_cloud_ceiling": {
-        "type": "data",
-        "description": "Geopotential height",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m",
-        "attrs": {
-          "long_name": "Geopotential height",
-          "short_name": "gh",
-          "standard_name": "geopotential_height",
-          "units": "m",
-          "step_type": "instant"
-        },
-        "shape": [
-          1973,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
       "maximum_temperature_2m": {
         "type": "data",
         "description": "Maximum temperature",
@@ -303,9 +329,9 @@
           1440
         ]
       },
-      "minimum_temperature_2m": {
+      "percent_frozen_precipitation_surface": {
         "type": "data",
-        "description": "Minimum temperature",
+        "description": "Percent frozen precipitation",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -313,65 +339,13 @@
           "latitude",
           "longitude"
         ],
-        "unit": "degree_Celsius",
+        "unit": "percent",
         "attrs": {
-          "long_name": "Minimum temperature",
-          "short_name": "tmin",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "min"
-        },
-        "shape": [
-          1973,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "precipitable_water_atmosphere": {
-        "type": "data",
-        "description": "Precipitable water",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "kg m-2",
-        "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
+          "long_name": "Percent frozen precipitation",
+          "short_name": "cpofp",
+          "units": "percent",
+          "comment": "Contains the value -50 when there is no precipitation.",
           "step_type": "instant"
-        },
-        "shape": [
-          1973,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "categorical_rain_surface": {
-        "type": "data",
-        "description": "Categorical rain",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical rain",
-          "short_name": "crain",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "avg"
         },
         "shape": [
           1973,
@@ -486,6 +460,84 @@
           1440
         ]
       },
+      "minimum_temperature_2m": {
+        "type": "data",
+        "description": "Minimum temperature",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "Minimum temperature",
+          "short_name": "tmin",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "min"
+        },
+        "shape": [
+          1973,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "pressure_surface": {
+        "type": "data",
+        "description": "Surface pressure",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          1973,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          1973,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
       "wind_u_10m": {
         "type": "data",
         "description": "10 metre U wind component",
@@ -512,9 +564,9 @@
           1440
         ]
       },
-      "percent_frozen_precipitation_surface": {
+      "wind_v_10m": {
         "type": "data",
-        "description": "Percent frozen precipitation",
+        "description": "10 metre V wind component",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -522,38 +574,12 @@
           "latitude",
           "longitude"
         ],
-        "unit": "percent",
+        "unit": "m s-1",
         "attrs": {
-          "long_name": "Percent frozen precipitation",
-          "short_name": "cpofp",
-          "units": "percent",
-          "comment": "Contains the value -50 when there is no precipitation.",
-          "step_type": "instant"
-        },
-        "shape": [
-          1973,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "pressure_surface": {
-        "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
           "step_type": "instant"
         },
         "shape": [
@@ -616,30 +642,21 @@
           1440
         ]
       },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
+      "expected_forecast_length": {
+        "type": "auxiliary",
+        "description": "Expected forecast length",
         "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
+          "init_time"
         ],
-        "unit": "m s-1",
         "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
+          "long_name": "Expected forecast length",
+          "statistics_approximate": {
+            "min": "0 days 00:00:00",
+            "max": "35 days 00:00:00"
+          }
         },
         "shape": [
-          1973,
-          31,
-          181,
-          721,
-          1440
+          1973
         ]
       },
       "ingested_forecast_length": {
@@ -661,22 +678,24 @@
           31
         ]
       },
-      "expected_forecast_length": {
+      "spatial_ref": {
         "type": "auxiliary",
-        "description": "Expected forecast length",
-        "dimensions": [
-          "init_time"
-        ],
+        "dimensions": [],
         "attrs": {
-          "long_name": "Expected forecast length",
-          "statistics_approximate": {
-            "min": "0 days 00:00:00",
-            "max": "35 days 00:00:00"
-          }
+          "comment": "This coordinate reference system matches the source data which follows WMO conventions of assuming the earth is a perfect sphere with a radius of 6,371,229m. It is similar to EPSG:4326, but EPSG:4326 uses a more accurate representation of the earth's shape.",
+          "crs_wkt": "GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",6371229,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH]]",
+          "semi_major_axis": 6371229.0,
+          "semi_minor_axis": 6371229.0,
+          "inverse_flattening": 0.0,
+          "reference_ellipsoid_name": "unknown",
+          "longitude_of_prime_meridian": 0.0,
+          "prime_meridian_name": "Greenwich",
+          "geographic_crs_name": "unknown",
+          "horizontal_datum_name": "unknown",
+          "grid_mapping_name": "latitude_longitude",
+          "spatial_ref": "GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",6371229,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH]]"
         },
-        "shape": [
-          1973
-        ]
+        "shape": []
       },
       "valid_time": {
         "type": "auxiliary",
@@ -697,25 +716,6 @@
           1973,
           181
         ]
-      },
-      "spatial_ref": {
-        "type": "auxiliary",
-        "dimensions": [],
-        "attrs": {
-          "comment": "This coordinate reference system matches the source data which follows WMO conventions of assuming the earth is a perfect sphere with a radius of 6,371,229m. It is similar to EPSG:4326, but EPSG:4326 uses a more accurate representation of the earth's shape.",
-          "crs_wkt": "GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",6371229,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH]]",
-          "semi_major_axis": 6371229.0,
-          "semi_minor_axis": 6371229.0,
-          "inverse_flattening": 0.0,
-          "reference_ellipsoid_name": "unknown",
-          "longitude_of_prime_meridian": 0.0,
-          "prime_meridian_name": "Greenwich",
-          "geographic_crs_name": "unknown",
-          "horizontal_datum_name": "unknown",
-          "grid_mapping_name": "latitude_longitude",
-          "spatial_ref": "GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",6371229,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH]]"
-        },
-        "shape": []
       }
     },
     "datetime": null

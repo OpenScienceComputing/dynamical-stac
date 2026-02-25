@@ -262,9 +262,9 @@
           1440
         ]
       },
-      "minimum_temperature_2m": {
+      "maximum_temperature_2m": {
         "type": "data",
-        "description": "Minimum temperature",
+        "description": "Maximum temperature",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -273,12 +273,12 @@
         ],
         "unit": "degree_Celsius",
         "attrs": {
-          "long_name": "Minimum temperature",
-          "short_name": "tmin",
+          "long_name": "Maximum temperature",
+          "short_name": "tmax",
           "standard_name": "air_temperature",
           "units": "degree_Celsius",
-          "comment": "Minimum over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z).",
-          "step_type": "min"
+          "comment": "Maximum over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z).",
+          "step_type": "max"
         },
         "shape": [
           7044,
@@ -310,22 +310,23 @@
           1440
         ]
       },
-      "pressure_reduced_to_mean_sea_level": {
+      "precipitation_surface": {
         "type": "data",
-        "description": "Pressure reduced to MSL",
+        "description": "Precipitation rate",
         "dimensions": [
           "init_time",
           "lead_time",
           "latitude",
           "longitude"
         ],
-        "unit": "Pa",
+        "unit": "kg m-2 s-1",
         "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
-          "step_type": "instant"
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "step_type": "avg"
         },
         "shape": [
           7044,
@@ -334,9 +335,9 @@
           1440
         ]
       },
-      "maximum_temperature_2m": {
+      "minimum_temperature_2m": {
         "type": "data",
-        "description": "Maximum temperature",
+        "description": "Minimum temperature",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -345,12 +346,12 @@
         ],
         "unit": "degree_Celsius",
         "attrs": {
-          "long_name": "Maximum temperature",
-          "short_name": "tmax",
+          "long_name": "Minimum temperature",
+          "short_name": "tmin",
           "standard_name": "air_temperature",
           "units": "degree_Celsius",
-          "comment": "Maximum over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z).",
-          "step_type": "max"
+          "comment": "Minimum over the previous 1-6 hours, reset every 6-hour forecast step (00Z, 06Z, 12Z, 18Z).",
+          "step_type": "min"
         },
         "shape": [
           7044,
@@ -383,21 +384,45 @@
           1440
         ]
       },
-      "pressure_surface": {
+      "relative_humidity_2m": {
         "type": "data",
-        "description": "Surface pressure",
+        "description": "2 metre relative humidity",
         "dimensions": [
           "init_time",
           "lead_time",
           "latitude",
           "longitude"
         ],
-        "unit": "Pa",
+        "unit": "percent",
         "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          7044,
+          209,
+          721,
+          1440
+        ]
+      },
+      "temperature_2m": {
+        "type": "data",
+        "description": "2 metre temperature",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "2 metre temperature",
+          "short_name": "2t",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
           "step_type": "instant"
         },
         "shape": [
@@ -432,30 +457,6 @@
           1440
         ]
       },
-      "temperature_2m": {
-        "type": "data",
-        "description": "2 metre temperature",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "2 metre temperature",
-          "short_name": "2t",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "instant"
-        },
-        "shape": [
-          7044,
-          209,
-          721,
-          1440
-        ]
-      },
       "wind_u_100m": {
         "type": "data",
         "description": "100 metre U wind component",
@@ -480,6 +481,30 @@
           1440
         ]
       },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          7044,
+          209,
+          721,
+          1440
+        ]
+      },
       "wind_v_100m": {
         "type": "data",
         "description": "100 metre V wind component",
@@ -493,30 +518,6 @@
         "attrs": {
           "long_name": "100 metre V wind component",
           "short_name": "100v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          7044,
-          209,
-          721,
-          1440
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
           "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
@@ -552,23 +553,22 @@
           1440
         ]
       },
-      "precipitation_surface": {
+      "wind_v_10m": {
         "type": "data",
-        "description": "Precipitation rate",
+        "description": "10 metre V wind component",
         "dimensions": [
           "init_time",
           "lead_time",
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2 s-1",
+        "unit": "m s-1",
         "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
-          "step_type": "avg"
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
         },
         "shape": [
           7044,
@@ -577,21 +577,21 @@
           1440
         ]
       },
-      "relative_humidity_2m": {
+      "pressure_surface": {
         "type": "data",
-        "description": "2 metre relative humidity",
+        "description": "Surface pressure",
         "dimensions": [
           "init_time",
           "lead_time",
           "latitude",
           "longitude"
         ],
-        "unit": "percent",
+        "unit": "Pa",
         "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
           "step_type": "instant"
         },
         "shape": [
