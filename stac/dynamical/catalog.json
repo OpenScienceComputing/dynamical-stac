@@ -26,6 +26,11 @@
     },
     {
       "rel": "item",
+      "href": "./noaa-gefs-forecast-35-day-vdev-quick/noaa-gefs-forecast-35-day-vdev-quick.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
       "href": "./noaa-gfs-analysis-v0-1-0/noaa-gfs-analysis-v0-1-0.json",
       "type": "application/geo+json"
     },

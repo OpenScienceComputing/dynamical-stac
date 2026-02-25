@@ -136,42 +136,21 @@
           1440
         ]
       },
-      "categorical_snow_surface": {
+      "downward_long_wave_radiation_flux_surface": {
         "type": "data",
-        "description": "Categorical snow",
+        "description": "Surface downward long-wave radiation flux",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "1",
+        "unit": "W m-2",
         "attrs": {
-          "long_name": "Categorical snow",
-          "short_name": "csnow",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "avg"
-        },
-        "shape": [
-          76422,
-          721,
-          1440
-        ]
-      },
-      "categorical_rain_surface": {
-        "type": "data",
-        "description": "Categorical rain",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical rain",
-          "short_name": "crain",
-          "units": "1",
-          "comment": "0=no; 1=yes",
+          "long_name": "Surface downward long-wave radiation flux",
+          "short_name": "sdlwrf",
+          "standard_name": "surface_downwelling_longwave_flux_in_air",
+          "units": "W m-2",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
           "step_type": "avg"
         },
         "shape": [
@@ -202,21 +181,43 @@
           1440
         ]
       },
-      "maximum_temperature_2m": {
+      "categorical_rain_surface": {
         "type": "data",
-        "description": "Maximum temperature",
+        "description": "Categorical rain",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "degree_Celsius",
+        "unit": "1",
         "attrs": {
-          "long_name": "Maximum temperature",
-          "short_name": "tmax",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "max"
+          "long_name": "Categorical rain",
+          "short_name": "crain",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "avg"
+        },
+        "shape": [
+          76422,
+          721,
+          1440
+        ]
+      },
+      "categorical_snow_surface": {
+        "type": "data",
+        "description": "Categorical snow",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical snow",
+          "short_name": "csnow",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "avg"
         },
         "shape": [
           76422,
@@ -237,29 +238,6 @@
           "long_name": "Surface downward short-wave radiation flux",
           "short_name": "sdswrf",
           "standard_name": "surface_downwelling_shortwave_flux_in_air",
-          "units": "W m-2",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
-          "step_type": "avg"
-        },
-        "shape": [
-          76422,
-          721,
-          1440
-        ]
-      },
-      "downward_long_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward long-wave radiation flux",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward long-wave radiation flux",
-          "short_name": "sdlwrf",
-          "standard_name": "surface_downwelling_longwave_flux_in_air",
           "units": "W m-2",
           "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
           "step_type": "avg"
@@ -403,9 +381,9 @@
           1440
         ]
       },
-      "temperature_2m": {
+      "maximum_temperature_2m": {
         "type": "data",
-        "description": "2 metre temperature",
+        "description": "Maximum temperature",
         "dimensions": [
           "time",
           "latitude",
@@ -413,10 +391,32 @@
         ],
         "unit": "degree_Celsius",
         "attrs": {
-          "long_name": "2 metre temperature",
-          "short_name": "2t",
+          "long_name": "Maximum temperature",
+          "short_name": "tmax",
           "standard_name": "air_temperature",
           "units": "degree_Celsius",
+          "step_type": "max"
+        },
+        "shape": [
+          76422,
+          721,
+          1440
+        ]
+      },
+      "relative_humidity_2m": {
+        "type": "data",
+        "description": "2 metre relative humidity",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
           "step_type": "instant"
         },
         "shape": [
@@ -448,9 +448,9 @@
           1440
         ]
       },
-      "wind_u_10m": {
+      "wind_u_100m": {
         "type": "data",
-        "description": "10 metre U wind component",
+        "description": "100 metre U wind component",
         "dimensions": [
           "time",
           "latitude",
@@ -458,53 +458,9 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
           "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          76422,
-          721,
-          1440
-        ]
-      },
-      "relative_humidity_2m": {
-        "type": "data",
-        "description": "2 metre relative humidity",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          76422,
-          721,
-          1440
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -536,9 +492,31 @@
           1440
         ]
       },
-      "wind_u_100m": {
+      "temperature_2m": {
         "type": "data",
-        "description": "100 metre U wind component",
+        "description": "2 metre temperature",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "2 metre temperature",
+          "short_name": "2t",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "instant"
+        },
+        "shape": [
+          76422,
+          721,
+          1440
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
         "dimensions": [
           "time",
           "latitude",
@@ -546,9 +524,31 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
           "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          76422,
+          721,
+          1440
+        ]
+      },
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },

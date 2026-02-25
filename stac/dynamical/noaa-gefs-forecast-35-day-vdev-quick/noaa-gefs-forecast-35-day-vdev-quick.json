@@ -8,7 +8,7 @@
     "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/datacube/v2.2.0/schema.json"
   ],
-  "id": "noaa-gefs-forecast-35-day-v0-2-0",
+  "id": "noaa-gefs-forecast-35-day-vdev-quick",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -44,7 +44,7 @@
   ],
   "properties": {
     "title": "NOAA GEFS - dynamical.org Icechunk Zarr",
-    "description": "<p>\n  The Global Ensemble Forecast System (GEFS) is a National Oceanic and\n  Atmospheric Administration (NOAA) National Centers for Environmental\n  Prediction (NCEP) weather forecast model. GEFS creates 31 separate\n  forecasts (ensemble members) to describe the range of forecast uncertainty.\n  </p>\n<p>These datasets have been translated to cloud-optimized Icechunk Zarr format by <a href=\"https://dynamical.org\">dynamical.org</a>.</p>\n<p>When Icechunk 2.0 is released, these datasets will be updated correspondingly, and updated client libraries will be required for access. To be notified of dataset updates, subscribe to the <a href='https://dynamical.org/updates/'>mailing list</a>.</p>\n<ul>\n  <li><a href=\"https://dynamical.org/catalog/noaa-gefs-forecast-35-day/\">NOAA GEFS forecast, 35 day</a> - Weather forecasts from the Global Ensemble Forecast System (GEFS) operated by NOAA NWS NCEP.</li>\n  <li><a href=\"https://dynamical.org/catalog/noaa-gefs-analysis/\">NOAA GEFS analysis</a> - Weather analysis from the Global Ensemble Forecast System (GEFS) operated by NOAA NWS NCEP.</li>\n</ul>\n\n## Open in Python\n\n```python\nimport pystac, xarray as xr\nimport xpystac  # registers xarray backend for icechunk stores\n\ncatalog = pystac.Catalog.from_file(\"https://opensciencecomputing.github.io/dynamical-stac/stac/dynamical/catalog.json\")\nitem = catalog.get_item(\"noaa-gefs-forecast-35-day-v0-2-0\")\n\n# The asset key is '{name}@{snapshot_id}'\nasset_key = next(k for k in item.assets if '@' in k)\nasset = item.assets[asset_key]\n\n# xpystac reconstructs the icechunk repo config from storage:schemes\nds = xr.open_dataset(asset)\n```",
+    "description": "<p>\n  The Global Ensemble Forecast System (GEFS) is a National Oceanic and\n  Atmospheric Administration (NOAA) National Centers for Environmental\n  Prediction (NCEP) weather forecast model. GEFS creates 31 separate\n  forecasts (ensemble members) to describe the range of forecast uncertainty.\n  </p>\n<p>These datasets have been translated to cloud-optimized Icechunk Zarr format by <a href=\"https://dynamical.org\">dynamical.org</a>.</p>\n<p>When Icechunk 2.0 is released, these datasets will be updated correspondingly, and updated client libraries will be required for access. To be notified of dataset updates, subscribe to the <a href='https://dynamical.org/updates/'>mailing list</a>.</p>\n<ul>\n  <li><a href=\"https://dynamical.org/catalog/noaa-gefs-forecast-35-day/\">NOAA GEFS forecast, 35 day</a> - Weather forecasts from the Global Ensemble Forecast System (GEFS) operated by NOAA NWS NCEP.</li>\n  <li><a href=\"https://dynamical.org/catalog/noaa-gefs-analysis/\">NOAA GEFS analysis</a> - Weather analysis from the Global Ensemble Forecast System (GEFS) operated by NOAA NWS NCEP.</li>\n</ul>\n\n## Open in Python\n\n```python\nimport pystac, xarray as xr\nimport xpystac  # registers xarray backend for icechunk stores\n\ncatalog = pystac.Catalog.from_file(\"https://opensciencecomputing.github.io/dynamical-stac/stac/dynamical/catalog.json\")\nitem = catalog.get_item(\"noaa-gefs-forecast-35-day-vdev-quick\")\n\n# The asset key is '{name}@{snapshot_id}'\nasset_key = next(k for k in item.assets if '@' in k)\nasset = item.assets[asset_key]\n\n# xpystac reconstructs the icechunk repo config from storage:schemes\nds = xr.open_dataset(asset)\n```",
     "providers": [
       {
         "name": "dynamical.org",
@@ -171,32 +171,6 @@
           1440
         ]
       },
-      "geopotential_height_cloud_ceiling": {
-        "type": "data",
-        "description": "Geopotential height",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m",
-        "attrs": {
-          "long_name": "Geopotential height",
-          "short_name": "gh",
-          "standard_name": "geopotential_height",
-          "units": "m",
-          "step_type": "instant"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
       "categorical_ice_pellets_surface": {
         "type": "data",
         "description": "Categorical ice pellets",
@@ -211,32 +185,6 @@
         "attrs": {
           "long_name": "Categorical ice pellets",
           "short_name": "cicep",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "avg"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "categorical_snow_surface": {
-        "type": "data",
-        "description": "Categorical snow",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical snow",
-          "short_name": "csnow",
           "units": "1",
           "comment": "0=no; 1=yes",
           "step_type": "avg"
@@ -267,6 +215,32 @@
           "units": "W m-2",
           "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
           "step_type": "avg"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "geopotential_height_cloud_ceiling": {
+        "type": "data",
+        "description": "Geopotential height",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m",
+        "attrs": {
+          "long_name": "Geopotential height",
+          "short_name": "gh",
+          "standard_name": "geopotential_height",
+          "units": "m",
+          "step_type": "instant"
         },
         "shape": [
           1974,
@@ -328,9 +302,9 @@
           1440
         ]
       },
-      "maximum_temperature_2m": {
+      "precipitation_surface": {
         "type": "data",
-        "description": "Maximum temperature",
+        "description": "Precipitation rate",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -338,13 +312,40 @@
           "latitude",
           "longitude"
         ],
-        "unit": "degree_Celsius",
+        "unit": "kg m-2 s-1",
         "attrs": {
-          "long_name": "Maximum temperature",
-          "short_name": "tmax",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "max"
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "step_type": "avg"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "categorical_snow_surface": {
+        "type": "data",
+        "description": "Categorical snow",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical snow",
+          "short_name": "csnow",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "avg"
         },
         "shape": [
           1974,
@@ -371,86 +372,6 @@
           "units": "percent",
           "comment": "Contains the value -50 when there is no precipitation.",
           "step_type": "instant"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "pressure_surface": {
-        "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "total_cloud_cover_atmosphere": {
-        "type": "data",
-        "description": "Total Cloud Cover",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "Total Cloud Cover",
-          "short_name": "tcc",
-          "standard_name": "cloud_area_fraction",
-          "units": "percent",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
-          "step_type": "avg"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "precipitation_surface": {
-        "type": "data",
-        "description": "Precipitation rate",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "kg m-2 s-1",
-        "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
-          "step_type": "avg"
         },
         "shape": [
           1974,
@@ -512,32 +433,6 @@
           1440
         ]
       },
-      "wind_u_100m": {
-        "type": "data",
-        "description": "100 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
       "temperature_2m": {
         "type": "data",
         "description": "2 metre temperature",
@@ -564,9 +459,88 @@
           1440
         ]
       },
-      "wind_v_10m": {
+      "total_cloud_cover_atmosphere": {
         "type": "data",
-        "description": "10 metre V wind component",
+        "description": "Total Cloud Cover",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "Total Cloud Cover",
+          "short_name": "tcc",
+          "standard_name": "cloud_area_fraction",
+          "units": "percent",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
+          "step_type": "avg"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "maximum_temperature_2m": {
+        "type": "data",
+        "description": "Maximum temperature",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "Maximum temperature",
+          "short_name": "tmax",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "max"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "pressure_surface": {
+        "type": "data",
+        "description": "Surface pressure",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -576,9 +550,9 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -616,9 +590,9 @@
           1440
         ]
       },
-      "wind_u_10m": {
+      "wind_u_100m": {
         "type": "data",
-        "description": "10 metre U wind component",
+        "description": "100 metre U wind component",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -628,9 +602,35 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
           "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -733,14 +733,14 @@
     }
   ],
   "assets": {
-    "noaa@6SFJ7J19WN1A116H6PSG": {
-      "href": "s3://dynamical-noaa-gefs/noaa-gefs-forecast-35-day/v0.2.0.icechunk/",
+    "noaa@84ZR9MMBT8P8Q5P4P0TG": {
+      "href": "s3://dynamical-noaa-gefs/noaa-gefs-forecast-35-day/vdev-quick.icechunk/",
       "type": "application/vnd.zarr+icechunk",
       "title": "NOAA GEFS - dynamical.org Icechunk Zarr",
       "zarr:consolidated": false,
       "zarr:zarr_format": 3,
-      "icechunk:snapshot_id": "6SFJ7J19WN1A116H6PSG",
-      "version": "6SFJ7J19WN1A116H6PSG",
+      "icechunk:snapshot_id": "84ZR9MMBT8P8Q5P4P0TG",
+      "version": "84ZR9MMBT8P8Q5P4P0TG",
       "storage:refs": [
         "aws-s3-dynamical-noaa-gefs"
       ],
