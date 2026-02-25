@@ -283,33 +283,9 @@
           1799
         ]
       },
-      "precipitable_water_atmosphere": {
+      "pressure_surface": {
         "type": "data",
-        "description": "Precipitable water",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "kg m-2",
-        "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          11135,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
+        "description": "Surface pressure",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -318,9 +294,9 @@
         ],
         "unit": "Pa",
         "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
           "units": "Pa",
           "step_type": "instant"
         },
@@ -379,57 +355,9 @@
           1799
         ]
       },
-      "temperature_2m": {
+      "pressure_reduced_to_mean_sea_level": {
         "type": "data",
-        "description": "2 metre temperature",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "2 metre temperature",
-          "short_name": "2t",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "instant"
-        },
-        "shape": [
-          11135,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_u_80m": {
-        "type": "data",
-        "description": "80 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "80 metre U wind component",
-          "short_name": "80u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          11135,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "pressure_surface": {
-        "type": "data",
-        "description": "Surface pressure",
+        "description": "Pressure reduced to MSL",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -438,82 +366,10 @@
         ],
         "unit": "Pa",
         "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
           "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          11135,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_v_80m": {
-        "type": "data",
-        "description": "80 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "80 metre V wind component",
-          "short_name": "80v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          11135,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          11135,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
           "step_type": "instant"
         },
         "shape": [
@@ -547,6 +403,126 @@
           1799
         ]
       },
+      "temperature_2m": {
+        "type": "data",
+        "description": "2 metre temperature",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "2 metre temperature",
+          "short_name": "2t",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "instant"
+        },
+        "shape": [
+          11135,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          11135,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "wind_u_80m": {
+        "type": "data",
+        "description": "80 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "80 metre U wind component",
+          "short_name": "80u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          11135,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "wind_v_80m": {
+        "type": "data",
+        "description": "80 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "80 metre V wind component",
+          "short_name": "80v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          11135,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          11135,
+          49,
+          1059,
+          1799
+        ]
+      },
       "total_cloud_cover_atmosphere": {
         "type": "data",
         "description": "Total Cloud Cover",
@@ -571,6 +547,30 @@
           1799
         ]
       },
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          11135,
+          49,
+          1059,
+          1799
+        ]
+      },
       "expected_forecast_length": {
         "type": "auxiliary",
         "description": "Expected forecast length",
@@ -586,28 +586,6 @@
         },
         "shape": [
           11135
-        ]
-      },
-      "longitude": {
-        "type": "auxiliary",
-        "description": "Longitude",
-        "dimensions": [
-          "y",
-          "x"
-        ],
-        "unit": "degree_east",
-        "attrs": {
-          "long_name": "Longitude",
-          "standard_name": "longitude",
-          "units": "degree_east",
-          "statistics_approximate": {
-            "min": -134.09548,
-            "max": -60.917192
-          }
-        },
-        "shape": [
-          1059,
-          1799
         ]
       },
       "latitude": {
@@ -649,6 +627,48 @@
           11135
         ]
       },
+      "longitude": {
+        "type": "auxiliary",
+        "description": "Longitude",
+        "dimensions": [
+          "y",
+          "x"
+        ],
+        "unit": "degree_east",
+        "attrs": {
+          "long_name": "Longitude",
+          "standard_name": "longitude",
+          "units": "degree_east",
+          "statistics_approximate": {
+            "min": -134.09548,
+            "max": -60.917192
+          }
+        },
+        "shape": [
+          1059,
+          1799
+        ]
+      },
+      "valid_time": {
+        "type": "auxiliary",
+        "description": "Valid time",
+        "dimensions": [
+          "init_time",
+          "lead_time"
+        ],
+        "attrs": {
+          "long_name": "Valid time",
+          "standard_name": "time",
+          "statistics_approximate": {
+            "min": "2018-07-13T12:00:00",
+            "max": "Present + 48 hours"
+          }
+        },
+        "shape": [
+          11135,
+          49
+        ]
+      },
       "spatial_ref": {
         "type": "auxiliary",
         "dimensions": [],
@@ -676,26 +696,6 @@
           ]
         },
         "shape": []
-      },
-      "valid_time": {
-        "type": "auxiliary",
-        "description": "Valid time",
-        "dimensions": [
-          "init_time",
-          "lead_time"
-        ],
-        "attrs": {
-          "long_name": "Valid time",
-          "standard_name": "time",
-          "statistics_approximate": {
-            "min": "2018-07-13T12:00:00",
-            "max": "Present + 48 hours"
-          }
-        },
-        "shape": [
-          11135,
-          49
-        ]
       }
     },
     "datetime": null
