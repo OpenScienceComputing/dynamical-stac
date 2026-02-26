@@ -355,9 +355,9 @@
           1440
         ]
       },
-      "pressure_reduced_to_mean_sea_level": {
+      "maximum_temperature_2m": {
         "type": "data",
-        "description": "Pressure reduced to MSL",
+        "description": "Maximum temperature",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -365,13 +365,13 @@
           "latitude",
           "longitude"
         ],
-        "unit": "Pa",
+        "unit": "degree_Celsius",
         "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
-          "step_type": "instant"
+          "long_name": "Maximum temperature",
+          "short_name": "tmax",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "max"
         },
         "shape": [
           1974,
@@ -407,58 +407,6 @@
           1440
         ]
       },
-      "maximum_temperature_2m": {
-        "type": "data",
-        "description": "Maximum temperature",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "Maximum temperature",
-          "short_name": "tmax",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "max"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "pressure_surface": {
-        "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
       "temperature_2m": {
         "type": "data",
         "description": "2 metre temperature",
@@ -475,58 +423,6 @@
           "short_name": "2t",
           "standard_name": "air_temperature",
           "units": "degree_Celsius",
-          "step_type": "instant"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          1974,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "relative_humidity_2m": {
-        "type": "data",
-        "description": "2 metre relative humidity",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
           "step_type": "instant"
         },
         "shape": [
@@ -564,9 +460,61 @@
           1440
         ]
       },
-      "wind_u_100m": {
+      "pressure_reduced_to_mean_sea_level": {
         "type": "data",
-        "description": "100 metre U wind component",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "pressure_surface": {
+        "type": "data",
+        "description": "Surface pressure",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -576,8 +524,8 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
           "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
@@ -616,6 +564,32 @@
           1440
         ]
       },
+      "relative_humidity_2m": {
+        "type": "data",
+        "description": "2 metre relative humidity",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
       "wind_v_10m": {
         "type": "data",
         "description": "10 metre V wind component",
@@ -631,6 +605,32 @@
           "long_name": "10 metre V wind component",
           "short_name": "10v",
           "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          1974,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_u_100m": {
+        "type": "data",
+        "description": "100 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
+          "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -659,24 +659,23 @@
           1974
         ]
       },
-      "valid_time": {
+      "ingested_forecast_length": {
         "type": "auxiliary",
-        "description": "Valid time",
+        "description": "Ingested forecast length",
         "dimensions": [
           "init_time",
-          "lead_time"
+          "ensemble_member"
         ],
         "attrs": {
-          "long_name": "Valid time",
-          "standard_name": "time",
+          "long_name": "Ingested forecast length",
           "statistics_approximate": {
-            "min": "2020-10-01T00:00:00",
-            "max": "Present + 35 days"
+            "min": "0 days 00:00:00",
+            "max": "35 days 00:00:00"
           }
         },
         "shape": [
           1974,
-          181
+          31
         ]
       },
       "spatial_ref": {
@@ -698,23 +697,24 @@
         },
         "shape": []
       },
-      "ingested_forecast_length": {
+      "valid_time": {
         "type": "auxiliary",
-        "description": "Ingested forecast length",
+        "description": "Valid time",
         "dimensions": [
           "init_time",
-          "ensemble_member"
+          "lead_time"
         ],
         "attrs": {
-          "long_name": "Ingested forecast length",
+          "long_name": "Valid time",
+          "standard_name": "time",
           "statistics_approximate": {
-            "min": "0 days 00:00:00",
-            "max": "35 days 00:00:00"
+            "min": "2020-10-01T00:00:00",
+            "max": "Present + 35 days"
           }
         },
         "shape": [
           1974,
-          31
+          181
         ]
       }
     },

@@ -92,9 +92,9 @@
       }
     },
     "cube:variables": {
-      "downward_long_wave_radiation_flux_surface": {
+      "categorical_precipitation_type_surface": {
         "type": "data",
-        "description": "Surface downward long-wave radiation flux",
+        "description": "Precipitation type",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -102,13 +102,13 @@
           "latitude",
           "longitude"
         ],
-        "unit": "W m-2",
+        "unit": "1",
         "attrs": {
-          "long_name": "Surface downward long-wave radiation flux",
-          "short_name": "sdlwrf",
-          "standard_name": "surface_downwelling_longwave_flux_in_air",
-          "units": "W m-2",
-          "step_type": "avg"
+          "long_name": "Precipitation type",
+          "short_name": "ptype",
+          "units": "1",
+          "comment": "0=No precipitation; 1=Rain; 2=Thunderstorm; 3=Freezing rain; 4=Mixed/ice; 5=Snow; 6=Wet snow; 7=Mixture of rain and snow; 8=Ice pellets; 9=Graupel; 10=Hail; 11=Drizzle; 12=Freezing drizzle; 13=Hail (less than 5 mm); 14=Hail (greater than or equal to 5 mm); 15-191=Reserved; 192-254=Reserved for local use; 255=Missing",
+          "step_type": "instant"
         },
         "shape": [
           696,
@@ -170,9 +170,9 @@
           1440
         ]
       },
-      "geopotential_height_500hpa": {
+      "precipitation_surface": {
         "type": "data",
-        "description": "Geopotential height",
+        "description": "Precipitation rate",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -180,65 +180,14 @@
           "latitude",
           "longitude"
         ],
-        "unit": "m",
+        "unit": "kg m-2 s-1",
         "attrs": {
-          "long_name": "Geopotential height",
-          "short_name": "gh",
-          "standard_name": "geopotential_height",
-          "units": "m",
-          "step_type": "instant"
-        },
-        "shape": [
-          696,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "categorical_precipitation_type_surface": {
-        "type": "data",
-        "description": "Precipitation type",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Precipitation type",
-          "short_name": "ptype",
-          "units": "1",
-          "comment": "0=No precipitation; 1=Rain; 2=Thunderstorm; 3=Freezing rain; 4=Mixed/ice; 5=Snow; 6=Wet snow; 7=Mixture of rain and snow; 8=Ice pellets; 9=Graupel; 10=Hail; 11=Drizzle; 12=Freezing drizzle; 13=Hail (less than 5 mm); 14=Hail (greater than or equal to 5 mm); 15-191=Reserved; 192-254=Reserved for local use; 255=Missing",
-          "step_type": "instant"
-        },
-        "shape": [
-          696,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "step_type": "avg"
         },
         "shape": [
           696,
@@ -274,9 +223,9 @@
           1440
         ]
       },
-      "precipitation_surface": {
+      "downward_long_wave_radiation_flux_surface": {
         "type": "data",
-        "description": "Precipitation rate",
+        "description": "Surface downward long-wave radiation flux",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -284,13 +233,12 @@
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2 s-1",
+        "unit": "W m-2",
         "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "long_name": "Surface downward long-wave radiation flux",
+          "short_name": "sdlwrf",
+          "standard_name": "surface_downwelling_longwave_flux_in_air",
+          "units": "W m-2",
           "step_type": "avg"
         },
         "shape": [
@@ -301,9 +249,9 @@
           1440
         ]
       },
-      "wind_v_100m": {
+      "geopotential_height_500hpa": {
         "type": "data",
-        "description": "100 metre V wind component",
+        "description": "Geopotential height",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -311,12 +259,12 @@
           "latitude",
           "longitude"
         ],
-        "unit": "m s-1",
+        "unit": "m",
         "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
+          "long_name": "Geopotential height",
+          "short_name": "gh",
+          "standard_name": "geopotential_height",
+          "units": "m",
           "step_type": "instant"
         },
         "shape": [
@@ -327,9 +275,9 @@
           1440
         ]
       },
-      "wind_u_100m": {
+      "wind_u_10m": {
         "type": "data",
-        "description": "100 metre U wind component",
+        "description": "10 metre U wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -339,8 +287,8 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
           "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
@@ -379,6 +327,58 @@
           1440
         ]
       },
+      "pressure_surface": {
+        "type": "data",
+        "description": "Surface pressure",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          696,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
+      "wind_v_100m": {
+        "type": "data",
+        "description": "100 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          696,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
       "temperature_2m": {
         "type": "data",
         "description": "2 metre temperature",
@@ -405,9 +405,9 @@
           1440
         ]
       },
-      "pressure_surface": {
+      "wind_u_100m": {
         "type": "data",
-        "description": "Surface pressure",
+        "description": "100 metre U wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -415,12 +415,12 @@
           "latitude",
           "longitude"
         ],
-        "unit": "Pa",
+        "unit": "m s-1",
         "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
           "step_type": "instant"
         },
         "shape": [
