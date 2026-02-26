@@ -92,21 +92,21 @@
       }
     },
     "cube:variables": {
-      "maximum_temperature_2m": {
+      "categorical_freezing_rain_surface": {
         "type": "data",
-        "description": "Maximum temperature",
+        "description": "Categorical freezing rain",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "degree_Celsius",
+        "unit": "1",
         "attrs": {
-          "long_name": "Maximum temperature",
-          "short_name": "tmax",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "max"
+          "long_name": "Categorical freezing rain",
+          "short_name": "cfrzr",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "avg"
         },
         "shape": [
           76430,
@@ -270,20 +270,20 @@
           1440
         ]
       },
-      "precipitable_water_atmosphere": {
+      "temperature_2m": {
         "type": "data",
-        "description": "Precipitable water",
+        "description": "2 metre temperature",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2",
+        "unit": "degree_Celsius",
         "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
+          "long_name": "2 metre temperature",
+          "short_name": "2t",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
           "step_type": "instant"
         },
         "shape": [
@@ -336,31 +336,9 @@
           1440
         ]
       },
-      "categorical_freezing_rain_surface": {
+      "maximum_temperature_2m": {
         "type": "data",
-        "description": "Categorical freezing rain",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical freezing rain",
-          "short_name": "cfrzr",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "avg"
-        },
-        "shape": [
-          76430,
-          721,
-          1440
-        ]
-      },
-      "temperature_2m": {
-        "type": "data",
-        "description": "2 metre temperature",
+        "description": "Maximum temperature",
         "dimensions": [
           "time",
           "latitude",
@@ -368,10 +346,32 @@
         ],
         "unit": "degree_Celsius",
         "attrs": {
-          "long_name": "2 metre temperature",
-          "short_name": "2t",
+          "long_name": "Maximum temperature",
+          "short_name": "tmax",
           "standard_name": "air_temperature",
           "units": "degree_Celsius",
+          "step_type": "max"
+        },
+        "shape": [
+          76430,
+          721,
+          1440
+        ]
+      },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
           "step_type": "instant"
         },
         "shape": [
@@ -425,28 +425,6 @@
           1440
         ]
       },
-      "minimum_temperature_2m": {
-        "type": "data",
-        "description": "Minimum temperature",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "Minimum temperature",
-          "short_name": "tmin",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "min"
-        },
-        "shape": [
-          76430,
-          721,
-          1440
-        ]
-      },
       "total_cloud_cover_atmosphere": {
         "type": "data",
         "description": "Total Cloud Cover",
@@ -463,6 +441,28 @@
           "units": "percent",
           "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
           "step_type": "avg"
+        },
+        "shape": [
+          76430,
+          721,
+          1440
+        ]
+      },
+      "wind_v_100m": {
+        "type": "data",
+        "description": "100 metre V wind component",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
         },
         "shape": [
           76430,
@@ -514,28 +514,6 @@
           1440
         ]
       },
-      "wind_v_100m": {
-        "type": "data",
-        "description": "100 metre V wind component",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          76430,
-          721,
-          1440
-        ]
-      },
       "wind_u_100m": {
         "type": "data",
         "description": "100 metre U wind component",
@@ -551,6 +529,28 @@
           "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
+        },
+        "shape": [
+          76430,
+          721,
+          1440
+        ]
+      },
+      "minimum_temperature_2m": {
+        "type": "data",
+        "description": "Minimum temperature",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "Minimum temperature",
+          "short_name": "tmin",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "min"
         },
         "shape": [
           76430,
