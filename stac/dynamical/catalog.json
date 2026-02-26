@@ -46,6 +46,11 @@
     },
     {
       "rel": "item",
+      "href": "./noaa-hrrr-analysis-v0-2-0/noaa-hrrr-analysis-v0-2-0.json",
+      "type": "application/geo+json"
+    },
+    {
+      "rel": "item",
       "href": "./noaa-hrrr-forecast-48-hour-v0-1-0/noaa-hrrr-forecast-48-hour-v0-1-0.json",
       "type": "application/geo+json"
     }

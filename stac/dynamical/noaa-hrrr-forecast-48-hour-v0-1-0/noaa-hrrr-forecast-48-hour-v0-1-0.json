@@ -92,30 +92,6 @@
       }
     },
     "cube:variables": {
-      "categorical_freezing_rain_surface": {
-        "type": "data",
-        "description": "Categorical freezing rain",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical freezing rain",
-          "short_name": "cfrzr",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "instant"
-        },
-        "shape": [
-          11139,
-          49,
-          1059,
-          1799
-        ]
-      },
       "categorical_rain_surface": {
         "type": "data",
         "description": "Categorical rain",
@@ -187,30 +163,6 @@
           1799
         ]
       },
-      "geopotential_height_cloud_ceiling": {
-        "type": "data",
-        "description": "Geopotential height",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m",
-        "attrs": {
-          "long_name": "Geopotential height",
-          "short_name": "gh",
-          "standard_name": "geopotential_height",
-          "units": "m",
-          "step_type": "instant"
-        },
-        "shape": [
-          11139,
-          49,
-          1059,
-          1799
-        ]
-      },
       "categorical_ice_pellets_surface": {
         "type": "data",
         "description": "Categorical ice pellets",
@@ -259,70 +211,21 @@
           1799
         ]
       },
-      "precipitable_water_atmosphere": {
+      "geopotential_height_cloud_ceiling": {
         "type": "data",
-        "description": "Precipitable water",
+        "description": "Geopotential height",
         "dimensions": [
           "init_time",
           "lead_time",
           "y",
           "x"
         ],
-        "unit": "kg m-2",
+        "unit": "m",
         "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          11139,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "precipitation_surface": {
-        "type": "data",
-        "description": "Precipitation rate",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "kg m-2 s-1",
-        "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
-          "step_type": "avg"
-        },
-        "shape": [
-          11139,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
+          "long_name": "Geopotential height",
+          "short_name": "gh",
+          "standard_name": "geopotential_height",
+          "units": "m",
           "step_type": "instant"
         },
         "shape": [
@@ -380,6 +283,126 @@
           1799
         ]
       },
+      "percent_frozen_precipitation_surface": {
+        "type": "data",
+        "description": "Percent frozen precipitation",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "Percent frozen precipitation",
+          "short_name": "cpofp",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          11139,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "precipitation_surface": {
+        "type": "data",
+        "description": "Precipitation rate",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "kg m-2 s-1",
+        "attrs": {
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "step_type": "avg"
+        },
+        "shape": [
+          11139,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "categorical_freezing_rain_surface": {
+        "type": "data",
+        "description": "Categorical freezing rain",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical freezing rain",
+          "short_name": "cfrzr",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "instant"
+        },
+        "shape": [
+          11139,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          11139,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          11139,
+          49,
+          1059,
+          1799
+        ]
+      },
       "total_cloud_cover_atmosphere": {
         "type": "data",
         "description": "Total Cloud Cover",
@@ -404,9 +427,9 @@
           1799
         ]
       },
-      "wind_u_10m": {
+      "wind_u_80m": {
         "type": "data",
-        "description": "10 metre U wind component",
+        "description": "80 metre U wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -415,33 +438,10 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
+          "long_name": "80 metre U wind component",
+          "short_name": "80u",
           "standard_name": "eastward_wind",
           "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          11139,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "percent_frozen_precipitation_surface": {
-        "type": "data",
-        "description": "Percent frozen precipitation",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "Percent frozen precipitation",
-          "short_name": "cpofp",
-          "units": "percent",
           "step_type": "instant"
         },
         "shape": [
@@ -499,9 +499,9 @@
           1799
         ]
       },
-      "wind_u_80m": {
+      "wind_u_10m": {
         "type": "data",
-        "description": "80 metre U wind component",
+        "description": "10 metre U wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -510,8 +510,8 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "80 metre U wind component",
-          "short_name": "80u",
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
           "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
