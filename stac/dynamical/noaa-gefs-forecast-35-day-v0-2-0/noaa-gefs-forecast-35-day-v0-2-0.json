@@ -118,33 +118,6 @@
           1440
         ]
       },
-      "downward_long_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward long-wave radiation flux",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward long-wave radiation flux",
-          "short_name": "sdlwrf",
-          "standard_name": "surface_downwelling_longwave_flux_in_air",
-          "units": "W m-2",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
-          "step_type": "avg"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
       "categorical_rain_surface": {
         "type": "data",
         "description": "Categorical rain",
@@ -171,35 +144,9 @@
           1440
         ]
       },
-      "categorical_ice_pellets_surface": {
+      "downward_long_wave_radiation_flux_surface": {
         "type": "data",
-        "description": "Categorical ice pellets",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical ice pellets",
-          "short_name": "cicep",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "avg"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "downward_short_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward short-wave radiation flux",
+        "description": "Surface downward long-wave radiation flux",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -209,9 +156,9 @@
         ],
         "unit": "W m-2",
         "attrs": {
-          "long_name": "Surface downward short-wave radiation flux",
-          "short_name": "sdswrf",
-          "standard_name": "surface_downwelling_shortwave_flux_in_air",
+          "long_name": "Surface downward long-wave radiation flux",
+          "short_name": "sdlwrf",
+          "standard_name": "surface_downwelling_longwave_flux_in_air",
           "units": "W m-2",
           "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
           "step_type": "avg"
@@ -250,6 +197,32 @@
           1440
         ]
       },
+      "categorical_ice_pellets_surface": {
+        "type": "data",
+        "description": "Categorical ice pellets",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical ice pellets",
+          "short_name": "cicep",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "avg"
+        },
+        "shape": [
+          1975,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
       "categorical_snow_surface": {
         "type": "data",
         "description": "Categorical snow",
@@ -266,6 +239,33 @@
           "short_name": "csnow",
           "units": "1",
           "comment": "0=no; 1=yes",
+          "step_type": "avg"
+        },
+        "shape": [
+          1975,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "downward_short_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward short-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward short-wave radiation flux",
+          "short_name": "sdswrf",
+          "standard_name": "surface_downwelling_shortwave_flux_in_air",
+          "units": "W m-2",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
           "step_type": "avg"
         },
         "shape": [
@@ -328,9 +328,9 @@
           1440
         ]
       },
-      "maximum_temperature_2m": {
+      "precipitation_surface": {
         "type": "data",
-        "description": "Maximum temperature",
+        "description": "Precipitation rate",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -338,13 +338,14 @@
           "latitude",
           "longitude"
         ],
-        "unit": "degree_Celsius",
+        "unit": "kg m-2 s-1",
         "attrs": {
-          "long_name": "Maximum temperature",
-          "short_name": "tmax",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "max"
+          "long_name": "Precipitation rate",
+          "short_name": "prate",
+          "standard_name": "precipitation_flux",
+          "units": "kg m-2 s-1",
+          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
+          "step_type": "avg"
         },
         "shape": [
           1975,
@@ -380,9 +381,9 @@
           1440
         ]
       },
-      "precipitation_surface": {
+      "pressure_reduced_to_mean_sea_level": {
         "type": "data",
-        "description": "Precipitation rate",
+        "description": "Pressure reduced to MSL",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -390,14 +391,13 @@
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2 s-1",
+        "unit": "Pa",
         "attrs": {
-          "long_name": "Precipitation rate",
-          "short_name": "prate",
-          "standard_name": "precipitation_flux",
-          "units": "kg m-2 s-1",
-          "comment": "Average precipitation rate since the previous forecast step. Units equivalent to mm/s.",
-          "step_type": "avg"
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
         },
         "shape": [
           1975,
@@ -433,9 +433,9 @@
           1440
         ]
       },
-      "total_cloud_cover_atmosphere": {
+      "maximum_temperature_2m": {
         "type": "data",
-        "description": "Total Cloud Cover",
+        "description": "Maximum temperature",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -443,66 +443,13 @@
           "latitude",
           "longitude"
         ],
-        "unit": "percent",
+        "unit": "degree_Celsius",
         "attrs": {
-          "long_name": "Total Cloud Cover",
-          "short_name": "tcc",
-          "standard_name": "cloud_area_fraction",
-          "units": "percent",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
-          "step_type": "avg"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "wind_u_100m": {
-        "type": "data",
-        "description": "100 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
+          "long_name": "Maximum temperature",
+          "short_name": "tmax",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "max"
         },
         "shape": [
           1975,
@@ -528,6 +475,32 @@
           "short_name": "sp",
           "standard_name": "surface_air_pressure",
           "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          1975,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_u_100m": {
+        "type": "data",
+        "description": "100 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
           "step_type": "instant"
         },
         "shape": [
@@ -616,9 +589,9 @@
           1440
         ]
       },
-      "pressure_reduced_to_mean_sea_level": {
+      "wind_u_10m": {
         "type": "data",
-        "description": "Pressure reduced to MSL",
+        "description": "10 metre U wind component",
         "dimensions": [
           "init_time",
           "ensemble_member",
@@ -626,13 +599,40 @@
           "latitude",
           "longitude"
         ],
-        "unit": "Pa",
+        "unit": "m s-1",
         "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
           "step_type": "instant"
+        },
+        "shape": [
+          1975,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "total_cloud_cover_atmosphere": {
+        "type": "data",
+        "description": "Total Cloud Cover",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "Total Cloud Cover",
+          "short_name": "tcc",
+          "standard_name": "cloud_area_fraction",
+          "units": "percent",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
+          "step_type": "avg"
         },
         "shape": [
           1975,
@@ -659,25 +659,6 @@
           1975
         ]
       },
-      "ingested_forecast_length": {
-        "type": "auxiliary",
-        "description": "Ingested forecast length",
-        "dimensions": [
-          "init_time",
-          "ensemble_member"
-        ],
-        "attrs": {
-          "long_name": "Ingested forecast length",
-          "statistics_approximate": {
-            "min": "0 days 00:00:00",
-            "max": "35 days 00:00:00"
-          }
-        },
-        "shape": [
-          1975,
-          31
-        ]
-      },
       "spatial_ref": {
         "type": "auxiliary",
         "dimensions": [],
@@ -696,6 +677,25 @@
           "spatial_ref": "GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",6371229,0]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AXIS[\"Longitude\",EAST],AXIS[\"Latitude\",NORTH]]"
         },
         "shape": []
+      },
+      "ingested_forecast_length": {
+        "type": "auxiliary",
+        "description": "Ingested forecast length",
+        "dimensions": [
+          "init_time",
+          "ensemble_member"
+        ],
+        "attrs": {
+          "long_name": "Ingested forecast length",
+          "statistics_approximate": {
+            "min": "0 days 00:00:00",
+            "max": "35 days 00:00:00"
+          }
+        },
+        "shape": [
+          1975,
+          31
+        ]
       },
       "valid_time": {
         "type": "auxiliary",
