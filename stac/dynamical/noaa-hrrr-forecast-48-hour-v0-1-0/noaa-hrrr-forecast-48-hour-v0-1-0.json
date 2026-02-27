@@ -57,12 +57,12 @@
       }
     ],
     "start_datetime": "2018-07-13T12:00:00Z",
-    "end_datetime": "2026-02-27T00:00:00Z",
+    "end_datetime": "2026-02-27T06:00:00Z",
     "cube:dimensions": {
       "init_time": {
         "extent": [
           "2018-07-13T12:00:00Z",
-          "2026-02-27T00:00:00Z"
+          "2026-02-27T06:00:00Z"
         ],
         "description": "Forecast initialization time",
         "step": "P0DT6H0M0S",
@@ -110,55 +110,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "categorical_snow_surface": {
-        "type": "data",
-        "description": "Categorical snow",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical snow",
-          "short_name": "csnow",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "instant"
-        },
-        "shape": [
-          11143,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "downward_long_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward long-wave radiation flux",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward long-wave radiation flux",
-          "short_name": "sdlwrf",
-          "standard_name": "surface_downwelling_longwave_flux_in_air",
-          "units": "W m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
@@ -182,7 +134,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
@@ -206,7 +158,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
@@ -229,7 +181,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
@@ -253,7 +205,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
@@ -277,30 +229,55 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
         ]
       },
-      "percent_frozen_precipitation_surface": {
+      "precipitable_water_atmosphere": {
         "type": "data",
-        "description": "Percent frozen precipitation",
+        "description": "Precipitable water",
         "dimensions": [
           "init_time",
           "lead_time",
           "y",
           "x"
         ],
-        "unit": "percent",
+        "unit": "kg m-2",
         "attrs": {
-          "long_name": "Percent frozen precipitation",
-          "short_name": "cpofp",
-          "units": "percent",
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
           "step_type": "instant"
         },
         "shape": [
-          11143,
+          11144,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "downward_long_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward long-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward long-wave radiation flux",
+          "short_name": "sdlwrf",
+          "standard_name": "surface_downwelling_longwave_flux_in_air",
+          "units": "W m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          11144,
           49,
           1059,
           1799
@@ -325,79 +302,31 @@
           "step_type": "avg"
         },
         "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
         ]
       },
-      "precipitable_water_atmosphere": {
+      "categorical_snow_surface": {
         "type": "data",
-        "description": "Precipitable water",
+        "description": "Categorical snow",
         "dimensions": [
           "init_time",
           "lead_time",
           "y",
           "x"
         ],
-        "unit": "kg m-2",
+        "unit": "1",
         "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
+          "long_name": "Categorical snow",
+          "short_name": "csnow",
+          "units": "1",
+          "comment": "0=no; 1=yes",
           "step_type": "instant"
         },
         "shape": [
-          11143,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "pressure_surface": {
-        "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          11143,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
@@ -421,7 +350,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
@@ -445,79 +374,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_v_80m": {
-        "type": "data",
-        "description": "80 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "80 metre V wind component",
-          "short_name": "80v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          11143,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "total_cloud_cover_atmosphere": {
-        "type": "data",
-        "description": "Total Cloud Cover",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "Total Cloud Cover",
-          "short_name": "tcc",
-          "standard_name": "cloud_area_fraction",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          11143,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          11143,
+          11144,
           49,
           1059,
           1799
@@ -541,7 +398,31 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
+          11144,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "pressure_surface": {
+        "type": "data",
+        "description": "Surface pressure",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          11144,
           49,
           1059,
           1799
@@ -565,7 +446,126 @@
           "step_type": "instant"
         },
         "shape": [
-          11143,
+          11144,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "percent_frozen_precipitation_surface": {
+        "type": "data",
+        "description": "Percent frozen precipitation",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "Percent frozen precipitation",
+          "short_name": "cpofp",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          11144,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          11144,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          11144,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "wind_v_80m": {
+        "type": "data",
+        "description": "80 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "80 metre V wind component",
+          "short_name": "80v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          11144,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "total_cloud_cover_atmosphere": {
+        "type": "data",
+        "description": "Total Cloud Cover",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "Total Cloud Cover",
+          "short_name": "tcc",
+          "standard_name": "cloud_area_fraction",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          11144,
           49,
           1059,
           1799
@@ -585,24 +585,7 @@
           }
         },
         "shape": [
-          11143
-        ]
-      },
-      "expected_forecast_length": {
-        "type": "auxiliary",
-        "description": "Expected forecast length",
-        "dimensions": [
-          "init_time"
-        ],
-        "attrs": {
-          "long_name": "Expected forecast length",
-          "statistics_approximate": {
-            "min": "0 days 00:00:00",
-            "max": "2 days 00:00:00"
-          }
-        },
-        "shape": [
-          11143
+          11144
         ]
       },
       "latitude": {
@@ -649,6 +632,23 @@
           1799
         ]
       },
+      "expected_forecast_length": {
+        "type": "auxiliary",
+        "description": "Expected forecast length",
+        "dimensions": [
+          "init_time"
+        ],
+        "attrs": {
+          "long_name": "Expected forecast length",
+          "statistics_approximate": {
+            "min": "0 days 00:00:00",
+            "max": "2 days 00:00:00"
+          }
+        },
+        "shape": [
+          11144
+        ]
+      },
       "valid_time": {
         "type": "auxiliary",
         "description": "Valid time",
@@ -665,7 +665,7 @@
           }
         },
         "shape": [
-          11143,
+          11144,
           49
         ]
       },
@@ -713,14 +713,14 @@
     }
   ],
   "assets": {
-    "noaa@HDV9FRSVMKJ3D4M2Q68G": {
+    "noaa@PG4FMPRJH96J1T4VBMBG": {
       "href": "s3://dynamical-noaa-hrrr/noaa-hrrr-forecast-48-hour/v0.1.0.icechunk/",
       "type": "application/vnd.zarr+icechunk",
       "title": "NOAA HRRR - dynamical.org Icechunk Zarr",
       "zarr:consolidated": false,
       "zarr:zarr_format": 3,
-      "icechunk:snapshot_id": "HDV9FRSVMKJ3D4M2Q68G",
-      "version": "HDV9FRSVMKJ3D4M2Q68G",
+      "icechunk:snapshot_id": "PG4FMPRJH96J1T4VBMBG",
+      "version": "PG4FMPRJH96J1T4VBMBG",
       "storage:refs": [
         "aws-s3-dynamical-noaa-hrrr"
       ],

@@ -114,9 +114,9 @@
           1440
         ]
       },
-      "categorical_rain_surface": {
+      "categorical_ice_pellets_surface": {
         "type": "data",
-        "description": "Categorical rain",
+        "description": "Categorical ice pellets",
         "dimensions": [
           "time",
           "latitude",
@@ -124,8 +124,8 @@
         ],
         "unit": "1",
         "attrs": {
-          "long_name": "Categorical rain",
-          "short_name": "crain",
+          "long_name": "Categorical ice pellets",
+          "short_name": "cicep",
           "units": "1",
           "comment": "0=no; 1=yes",
           "step_type": "avg"
@@ -159,42 +159,21 @@
           1440
         ]
       },
-      "geopotential_height_cloud_ceiling": {
+      "downward_short_wave_radiation_flux_surface": {
         "type": "data",
-        "description": "Geopotential height",
+        "description": "Surface downward short-wave radiation flux",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "m",
+        "unit": "W m-2",
         "attrs": {
-          "long_name": "Geopotential height",
-          "short_name": "gh",
-          "standard_name": "geopotential_height",
-          "units": "m",
-          "step_type": "instant"
-        },
-        "shape": [
-          76434,
-          721,
-          1440
-        ]
-      },
-      "categorical_ice_pellets_surface": {
-        "type": "data",
-        "description": "Categorical ice pellets",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical ice pellets",
-          "short_name": "cicep",
-          "units": "1",
-          "comment": "0=no; 1=yes",
+          "long_name": "Surface downward short-wave radiation flux",
+          "short_name": "sdswrf",
+          "standard_name": "surface_downwelling_shortwave_flux_in_air",
+          "units": "W m-2",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
           "step_type": "avg"
         },
         "shape": [
@@ -218,6 +197,28 @@
           "units": "1",
           "comment": "0=no; 1=yes",
           "step_type": "avg"
+        },
+        "shape": [
+          76434,
+          721,
+          1440
+        ]
+      },
+      "pressure_surface": {
+        "type": "data",
+        "description": "Surface pressure",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
+          "units": "Pa",
+          "step_type": "instant"
         },
         "shape": [
           76434,
@@ -269,6 +270,72 @@
           1440
         ]
       },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          76434,
+          721,
+          1440
+        ]
+      },
+      "categorical_rain_surface": {
+        "type": "data",
+        "description": "Categorical rain",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical rain",
+          "short_name": "crain",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "avg"
+        },
+        "shape": [
+          76434,
+          721,
+          1440
+        ]
+      },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          76434,
+          721,
+          1440
+        ]
+      },
       "precipitation_surface": {
         "type": "data",
         "description": "Precipitation rate",
@@ -292,42 +359,20 @@
           1440
         ]
       },
-      "relative_humidity_2m": {
+      "geopotential_height_cloud_ceiling": {
         "type": "data",
-        "description": "2 metre relative humidity",
+        "description": "Geopotential height",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "percent",
+        "unit": "m",
         "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          76434,
-          721,
-          1440
-        ]
-      },
-      "pressure_surface": {
-        "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
+          "long_name": "Geopotential height",
+          "short_name": "gh",
+          "standard_name": "geopotential_height",
+          "units": "m",
           "step_type": "instant"
         },
         "shape": [
@@ -358,65 +403,20 @@
           1440
         ]
       },
-      "precipitable_water_atmosphere": {
+      "temperature_2m": {
         "type": "data",
-        "description": "Precipitable water",
+        "description": "2 metre temperature",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "kg m-2",
+        "unit": "degree_Celsius",
         "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          76434,
-          721,
-          1440
-        ]
-      },
-      "downward_short_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward short-wave radiation flux",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward short-wave radiation flux",
-          "short_name": "sdswrf",
-          "standard_name": "surface_downwelling_shortwave_flux_in_air",
-          "units": "W m-2",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
-          "step_type": "avg"
-        },
-        "shape": [
-          76434,
-          721,
-          1440
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
-          "units": "Pa",
+          "long_name": "2 metre temperature",
+          "short_name": "2t",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
           "step_type": "instant"
         },
         "shape": [
@@ -438,6 +438,50 @@
           "long_name": "100 metre U wind component",
           "short_name": "100u",
           "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          76434,
+          721,
+          1440
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          76434,
+          721,
+          1440
+        ]
+      },
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
+        "dimensions": [
+          "time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -492,64 +536,20 @@
           1440
         ]
       },
-      "wind_u_10m": {
+      "relative_humidity_2m": {
         "type": "data",
-        "description": "10 metre U wind component",
+        "description": "2 metre relative humidity",
         "dimensions": [
           "time",
           "latitude",
           "longitude"
         ],
-        "unit": "m s-1",
+        "unit": "percent",
         "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          76434,
-          721,
-          1440
-        ]
-      },
-      "temperature_2m": {
-        "type": "data",
-        "description": "2 metre temperature",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "2 metre temperature",
-          "short_name": "2t",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "instant"
-        },
-        "shape": [
-          76434,
-          721,
-          1440
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
-        "dimensions": [
-          "time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
           "step_type": "instant"
         },
         "shape": [

@@ -57,12 +57,12 @@
       }
     ],
     "start_datetime": "2020-10-01T00:00:00Z",
-    "end_datetime": "2026-02-26T00:00:00Z",
+    "end_datetime": "2026-02-27T00:00:00Z",
     "cube:dimensions": {
       "init_time": {
         "extent": [
           "2020-10-01T00:00:00Z",
-          "2026-02-26T00:00:00Z"
+          "2026-02-27T00:00:00Z"
         ],
         "description": "Forecast initialization time",
         "step": "P1DT0H0M0S",
@@ -111,33 +111,7 @@
           "step_type": "avg"
         },
         "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "categorical_rain_surface": {
-        "type": "data",
-        "description": "Categorical rain",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical rain",
-          "short_name": "crain",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "avg"
-        },
-        "shape": [
-          1975,
+          1976,
           31,
           181,
           721,
@@ -163,86 +137,7 @@
           "step_type": "avg"
         },
         "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "downward_short_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward short-wave radiation flux",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward short-wave radiation flux",
-          "short_name": "sdswrf",
-          "standard_name": "surface_downwelling_shortwave_flux_in_air",
-          "units": "W m-2",
-          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
-          "step_type": "avg"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "categorical_ice_pellets_surface": {
-        "type": "data",
-        "description": "Categorical ice pellets",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical ice pellets",
-          "short_name": "cicep",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "avg"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "maximum_temperature_2m": {
-        "type": "data",
-        "description": "Maximum temperature",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "degree_Celsius",
-        "attrs": {
-          "long_name": "Maximum temperature",
-          "short_name": "tmax",
-          "standard_name": "air_temperature",
-          "units": "degree_Celsius",
-          "step_type": "max"
-        },
-        "shape": [
-          1975,
+          1976,
           31,
           181,
           721,
@@ -269,7 +164,60 @@
           "step_type": "avg"
         },
         "shape": [
-          1975,
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "categorical_ice_pellets_surface": {
+        "type": "data",
+        "description": "Categorical ice pellets",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical ice pellets",
+          "short_name": "cicep",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "avg"
+        },
+        "shape": [
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "downward_short_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward short-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward short-wave radiation flux",
+          "short_name": "sdswrf",
+          "standard_name": "surface_downwelling_shortwave_flux_in_air",
+          "units": "W m-2",
+          "comment": "Average value in the last 6 hour period (00, 06, 12, 18 UTC) or 3 hour period (03, 09, 15, 21 UTC).",
+          "step_type": "avg"
+        },
+        "shape": [
+          1976,
           31,
           181,
           721,
@@ -295,33 +243,7 @@
           "step_type": "instant"
         },
         "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "percent_frozen_precipitation_surface": {
-        "type": "data",
-        "description": "Percent frozen precipitation",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "Percent frozen precipitation",
-          "short_name": "cpofp",
-          "units": "percent",
-          "comment": "Contains the value -50 when there is no precipitation.",
-          "step_type": "instant"
-        },
-        "shape": [
-          1975,
+          1976,
           31,
           181,
           721,
@@ -347,7 +269,85 @@
           "step_type": "min"
         },
         "shape": [
-          1975,
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "categorical_rain_surface": {
+        "type": "data",
+        "description": "Categorical rain",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical rain",
+          "short_name": "crain",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "avg"
+        },
+        "shape": [
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "maximum_temperature_2m": {
+        "type": "data",
+        "description": "Maximum temperature",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "degree_Celsius",
+        "attrs": {
+          "long_name": "Maximum temperature",
+          "short_name": "tmax",
+          "standard_name": "air_temperature",
+          "units": "degree_Celsius",
+          "step_type": "max"
+        },
+        "shape": [
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "percent_frozen_precipitation_surface": {
+        "type": "data",
+        "description": "Percent frozen precipitation",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "Percent frozen precipitation",
+          "short_name": "cpofp",
+          "units": "percent",
+          "comment": "Contains the value -50 when there is no precipitation.",
+          "step_type": "instant"
+        },
+        "shape": [
+          1976,
           31,
           181,
           721,
@@ -373,7 +373,7 @@
           "step_type": "instant"
         },
         "shape": [
-          1975,
+          1976,
           31,
           181,
           721,
@@ -399,7 +399,33 @@
           "step_type": "instant"
         },
         "shape": [
-          1975,
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "precipitable_water_atmosphere": {
+        "type": "data",
+        "description": "Precipitable water",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "kg m-2",
+        "attrs": {
+          "long_name": "Precipitable water",
+          "short_name": "pwat",
+          "standard_name": "atmosphere_mass_content_of_water_vapor",
+          "units": "kg m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          1976,
           31,
           181,
           721,
@@ -426,137 +452,7 @@
           "step_type": "avg"
         },
         "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "precipitable_water_atmosphere": {
-        "type": "data",
-        "description": "Precipitable water",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "kg m-2",
-        "attrs": {
-          "long_name": "Precipitable water",
-          "short_name": "pwat",
-          "standard_name": "atmosphere_mass_content_of_water_vapor",
-          "units": "kg m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "wind_u_100m": {
-        "type": "data",
-        "description": "100 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "relative_humidity_2m": {
-        "type": "data",
-        "description": "2 metre relative humidity",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "wind_v_100m": {
-        "type": "data",
-        "description": "100 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          1975,
+          1976,
           31,
           181,
           721,
@@ -582,33 +478,7 @@
           "step_type": "instant"
         },
         "shape": [
-          1975,
-          31,
-          181,
-          721,
-          1440
-        ]
-      },
-      "wind_v_10m": {
-        "type": "data",
-        "description": "10 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "ensemble_member",
-          "lead_time",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre V wind component",
-          "short_name": "10v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          1975,
+          1976,
           31,
           181,
           721,
@@ -635,7 +505,137 @@
           "step_type": "avg"
         },
         "shape": [
-          1975,
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_v_10m": {
+        "type": "data",
+        "description": "10 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre V wind component",
+          "short_name": "10v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_v_100m": {
+        "type": "data",
+        "description": "100 metre V wind component",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
+          "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "relative_humidity_2m": {
+        "type": "data",
+        "description": "2 metre relative humidity",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          1976,
+          31,
+          181,
+          721,
+          1440
+        ]
+      },
+      "wind_u_100m": {
+        "type": "data",
+        "description": "100 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "ensemble_member",
+          "lead_time",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          1976,
           31,
           181,
           721,
@@ -656,7 +656,7 @@
           }
         },
         "shape": [
-          1975
+          1976
         ]
       },
       "ingested_forecast_length": {
@@ -674,7 +674,7 @@
           }
         },
         "shape": [
-          1975,
+          1976,
           31
         ]
       },
@@ -713,7 +713,7 @@
           }
         },
         "shape": [
-          1975,
+          1976,
           181
         ]
       }
@@ -733,14 +733,14 @@
     }
   ],
   "assets": {
-    "noaa@FCX010C64T7FRRGANZ6G": {
+    "noaa@03WSTJ0AR12075ZFXJJ0": {
       "href": "s3://dynamical-noaa-gefs/noaa-gefs-forecast-35-day/v0.2.0.icechunk/",
       "type": "application/vnd.zarr+icechunk",
       "title": "NOAA GEFS - dynamical.org Icechunk Zarr",
       "zarr:consolidated": false,
       "zarr:zarr_format": 3,
-      "icechunk:snapshot_id": "FCX010C64T7FRRGANZ6G",
-      "version": "FCX010C64T7FRRGANZ6G",
+      "icechunk:snapshot_id": "03WSTJ0AR12075ZFXJJ0",
+      "version": "03WSTJ0AR12075ZFXJJ0",
       "storage:refs": [
         "aws-s3-dynamical-noaa-gefs"
       ],

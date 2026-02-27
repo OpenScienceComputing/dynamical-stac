@@ -222,6 +222,32 @@
           1440
         ]
       },
+      "pressure_reduced_to_mean_sea_level": {
+        "type": "data",
+        "description": "Pressure reduced to MSL",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "Pa",
+        "attrs": {
+          "long_name": "Pressure reduced to MSL",
+          "short_name": "prmsl",
+          "standard_name": "air_pressure_at_mean_sea_level",
+          "units": "Pa",
+          "step_type": "instant"
+        },
+        "shape": [
+          697,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
       "wind_u_10m": {
         "type": "data",
         "description": "10 metre U wind component",
@@ -248,35 +274,9 @@
           1440
         ]
       },
-      "wind_v_100m": {
+      "pressure_surface": {
         "type": "data",
-        "description": "100 metre V wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "100 metre V wind component",
-          "short_name": "100v",
-          "standard_name": "northward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          697,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "pressure_reduced_to_mean_sea_level": {
-        "type": "data",
-        "description": "Pressure reduced to MSL",
+        "description": "Surface pressure",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -286,9 +286,9 @@
         ],
         "unit": "Pa",
         "attrs": {
-          "long_name": "Pressure reduced to MSL",
-          "short_name": "prmsl",
-          "standard_name": "air_pressure_at_mean_sea_level",
+          "long_name": "Surface pressure",
+          "short_name": "sp",
+          "standard_name": "surface_air_pressure",
           "units": "Pa",
           "step_type": "instant"
         },
@@ -353,35 +353,9 @@
           1440
         ]
       },
-      "pressure_surface": {
+      "wind_v_100m": {
         "type": "data",
-        "description": "Surface pressure",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "ensemble_member",
-          "latitude",
-          "longitude"
-        ],
-        "unit": "Pa",
-        "attrs": {
-          "long_name": "Surface pressure",
-          "short_name": "sp",
-          "standard_name": "surface_air_pressure",
-          "units": "Pa",
-          "step_type": "instant"
-        },
-        "shape": [
-          697,
-          85,
-          51,
-          721,
-          1440
-        ]
-      },
-      "wind_u_100m": {
-        "type": "data",
-        "description": "100 metre U wind component",
+        "description": "100 metre V wind component",
         "dimensions": [
           "init_time",
           "lead_time",
@@ -391,9 +365,9 @@
         ],
         "unit": "m s-1",
         "attrs": {
-          "long_name": "100 metre U wind component",
-          "short_name": "100u",
-          "standard_name": "eastward_wind",
+          "long_name": "100 metre V wind component",
+          "short_name": "100v",
+          "standard_name": "northward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -420,6 +394,32 @@
           "long_name": "10 metre V wind component",
           "short_name": "10v",
           "standard_name": "northward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          697,
+          85,
+          51,
+          721,
+          1440
+        ]
+      },
+      "wind_u_100m": {
+        "type": "data",
+        "description": "100 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "ensemble_member",
+          "latitude",
+          "longitude"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "100 metre U wind component",
+          "short_name": "100u",
+          "standard_name": "eastward_wind",
           "units": "m s-1",
           "step_type": "instant"
         },
@@ -520,14 +520,14 @@
     }
   ],
   "assets": {
-    "ecmwf@KEZH96K6KAAQ9X29EQEG": {
+    "ecmwf@2ARZYJWVWYPNST3YQV4G": {
       "href": "s3://dynamical-ecmwf-ifs-ens/ecmwf-ifs-ens-forecast-15-day-0-25-degree/v0.1.0.icechunk/",
       "type": "application/vnd.zarr+icechunk",
       "title": "ECMWF IFS ENS - dynamical.org Icechunk Zarr",
       "zarr:consolidated": false,
       "zarr:zarr_format": 3,
-      "icechunk:snapshot_id": "KEZH96K6KAAQ9X29EQEG",
-      "version": "KEZH96K6KAAQ9X29EQEG",
+      "icechunk:snapshot_id": "2ARZYJWVWYPNST3YQV4G",
+      "version": "2ARZYJWVWYPNST3YQV4G",
       "storage:refs": [
         "aws-s3-dynamical-ecmwf-ifs-ens"
       ],
