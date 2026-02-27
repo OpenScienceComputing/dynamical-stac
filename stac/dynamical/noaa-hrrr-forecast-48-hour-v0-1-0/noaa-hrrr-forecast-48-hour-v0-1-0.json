@@ -57,12 +57,12 @@
       }
     ],
     "start_datetime": "2018-07-13T12:00:00Z",
-    "end_datetime": "2026-02-26T18:00:00Z",
+    "end_datetime": "2026-02-27T00:00:00Z",
     "cube:dimensions": {
       "init_time": {
         "extent": [
           "2018-07-13T12:00:00Z",
-          "2026-02-26T18:00:00Z"
+          "2026-02-27T00:00:00Z"
         ],
         "description": "Forecast initialization time",
         "step": "P0DT6H0M0S",
@@ -110,7 +110,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
           49,
           1059,
           1799
@@ -134,103 +134,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "downward_long_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward long-wave radiation flux",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward long-wave radiation flux",
-          "short_name": "sdlwrf",
-          "standard_name": "surface_downwelling_longwave_flux_in_air",
-          "units": "W m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          11142,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "downward_short_wave_radiation_flux_surface": {
-        "type": "data",
-        "description": "Surface downward short-wave radiation flux",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "W m-2",
-        "attrs": {
-          "long_name": "Surface downward short-wave radiation flux",
-          "short_name": "sdswrf",
-          "standard_name": "surface_downwelling_shortwave_flux_in_air",
-          "units": "W m-2",
-          "step_type": "instant"
-        },
-        "shape": [
-          11142,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "geopotential_height_cloud_ceiling": {
-        "type": "data",
-        "description": "Geopotential height",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m",
-        "attrs": {
-          "long_name": "Geopotential height",
-          "short_name": "gh",
-          "standard_name": "geopotential_height",
-          "units": "m",
-          "step_type": "instant"
-        },
-        "shape": [
-          11142,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "categorical_ice_pellets_surface": {
-        "type": "data",
-        "description": "Categorical ice pellets",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "1",
-        "attrs": {
-          "long_name": "Categorical ice pellets",
-          "short_name": "cicep",
-          "units": "1",
-          "comment": "0=no; 1=yes",
-          "step_type": "instant"
-        },
-        "shape": [
-          11142,
+          11143,
           49,
           1059,
           1799
@@ -254,7 +158,79 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "downward_short_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward short-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward short-wave radiation flux",
+          "short_name": "sdswrf",
+          "standard_name": "surface_downwelling_shortwave_flux_in_air",
+          "units": "W m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          11143,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "geopotential_height_cloud_ceiling": {
+        "type": "data",
+        "description": "Geopotential height",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m",
+        "attrs": {
+          "long_name": "Geopotential height",
+          "short_name": "gh",
+          "standard_name": "geopotential_height",
+          "units": "m",
+          "step_type": "instant"
+        },
+        "shape": [
+          11143,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "categorical_ice_pellets_surface": {
+        "type": "data",
+        "description": "Categorical ice pellets",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "1",
+        "attrs": {
+          "long_name": "Categorical ice pellets",
+          "short_name": "cicep",
+          "units": "1",
+          "comment": "0=no; 1=yes",
+          "step_type": "instant"
+        },
+        "shape": [
+          11143,
           49,
           1059,
           1799
@@ -277,7 +253,31 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "downward_long_wave_radiation_flux_surface": {
+        "type": "data",
+        "description": "Surface downward long-wave radiation flux",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "W m-2",
+        "attrs": {
+          "long_name": "Surface downward long-wave radiation flux",
+          "short_name": "sdlwrf",
+          "standard_name": "surface_downwelling_longwave_flux_in_air",
+          "units": "W m-2",
+          "step_type": "instant"
+        },
+        "shape": [
+          11143,
           49,
           1059,
           1799
@@ -301,7 +301,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
           49,
           1059,
           1799
@@ -325,7 +325,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
           49,
           1059,
           1799
@@ -349,7 +349,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
           49,
           1059,
           1799
@@ -372,55 +372,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "wind_u_10m": {
-        "type": "data",
-        "description": "10 metre U wind component",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "m s-1",
-        "attrs": {
-          "long_name": "10 metre U wind component",
-          "short_name": "10u",
-          "standard_name": "eastward_wind",
-          "units": "m s-1",
-          "step_type": "instant"
-        },
-        "shape": [
-          11142,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "total_cloud_cover_atmosphere": {
-        "type": "data",
-        "description": "Total Cloud Cover",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "Total Cloud Cover",
-          "short_name": "tcc",
-          "standard_name": "cloud_area_fraction",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          11142,
+          11143,
           49,
           1059,
           1799
@@ -445,31 +397,7 @@
           "step_type": "avg"
         },
         "shape": [
-          11142,
-          49,
-          1059,
-          1799
-        ]
-      },
-      "relative_humidity_2m": {
-        "type": "data",
-        "description": "2 metre relative humidity",
-        "dimensions": [
-          "init_time",
-          "lead_time",
-          "y",
-          "x"
-        ],
-        "unit": "percent",
-        "attrs": {
-          "long_name": "2 metre relative humidity",
-          "short_name": "2r",
-          "standard_name": "relative_humidity",
-          "units": "percent",
-          "step_type": "instant"
-        },
-        "shape": [
-          11142,
+          11143,
           49,
           1059,
           1799
@@ -493,7 +421,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
           49,
           1059,
           1799
@@ -517,7 +445,7 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
           49,
           1059,
           1799
@@ -541,7 +469,31 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "total_cloud_cover_atmosphere": {
+        "type": "data",
+        "description": "Total Cloud Cover",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "Total Cloud Cover",
+          "short_name": "tcc",
+          "standard_name": "cloud_area_fraction",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          11143,
           49,
           1059,
           1799
@@ -565,7 +517,55 @@
           "step_type": "instant"
         },
         "shape": [
-          11142,
+          11143,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "wind_u_10m": {
+        "type": "data",
+        "description": "10 metre U wind component",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "m s-1",
+        "attrs": {
+          "long_name": "10 metre U wind component",
+          "short_name": "10u",
+          "standard_name": "eastward_wind",
+          "units": "m s-1",
+          "step_type": "instant"
+        },
+        "shape": [
+          11143,
+          49,
+          1059,
+          1799
+        ]
+      },
+      "relative_humidity_2m": {
+        "type": "data",
+        "description": "2 metre relative humidity",
+        "dimensions": [
+          "init_time",
+          "lead_time",
+          "y",
+          "x"
+        ],
+        "unit": "percent",
+        "attrs": {
+          "long_name": "2 metre relative humidity",
+          "short_name": "2r",
+          "standard_name": "relative_humidity",
+          "units": "percent",
+          "step_type": "instant"
+        },
+        "shape": [
+          11143,
           49,
           1059,
           1799
@@ -585,7 +585,7 @@
           }
         },
         "shape": [
-          11142
+          11143
         ]
       },
       "longitude": {
@@ -610,6 +610,28 @@
           1799
         ]
       },
+      "latitude": {
+        "type": "auxiliary",
+        "description": "Latitude",
+        "dimensions": [
+          "y",
+          "x"
+        ],
+        "unit": "degree_north",
+        "attrs": {
+          "long_name": "Latitude",
+          "standard_name": "latitude",
+          "units": "degree_north",
+          "statistics_approximate": {
+            "min": 21.138123,
+            "max": 52.615653
+          }
+        },
+        "shape": [
+          1059,
+          1799
+        ]
+      },
       "ingested_forecast_length": {
         "type": "auxiliary",
         "description": "Ingested forecast length",
@@ -624,7 +646,7 @@
           }
         },
         "shape": [
-          11142
+          11143
         ]
       },
       "spatial_ref": {
@@ -655,28 +677,6 @@
         },
         "shape": []
       },
-      "latitude": {
-        "type": "auxiliary",
-        "description": "Latitude",
-        "dimensions": [
-          "y",
-          "x"
-        ],
-        "unit": "degree_north",
-        "attrs": {
-          "long_name": "Latitude",
-          "standard_name": "latitude",
-          "units": "degree_north",
-          "statistics_approximate": {
-            "min": 21.138123,
-            "max": 52.615653
-          }
-        },
-        "shape": [
-          1059,
-          1799
-        ]
-      },
       "valid_time": {
         "type": "auxiliary",
         "description": "Valid time",
@@ -693,7 +693,7 @@
           }
         },
         "shape": [
-          11142,
+          11143,
           49
         ]
       }
@@ -713,14 +713,14 @@
     }
   ],
   "assets": {
-    "noaa@YYEYM1GFMM1ZM3F4AT4G": {
+    "noaa@HDV9FRSVMKJ3D4M2Q68G": {
       "href": "s3://dynamical-noaa-hrrr/noaa-hrrr-forecast-48-hour/v0.1.0.icechunk/",
       "type": "application/vnd.zarr+icechunk",
       "title": "NOAA HRRR - dynamical.org Icechunk Zarr",
       "zarr:consolidated": false,
       "zarr:zarr_format": 3,
-      "icechunk:snapshot_id": "YYEYM1GFMM1ZM3F4AT4G",
-      "version": "YYEYM1GFMM1ZM3F4AT4G",
+      "icechunk:snapshot_id": "HDV9FRSVMKJ3D4M2Q68G",
+      "version": "HDV9FRSVMKJ3D4M2Q68G",
       "storage:refs": [
         "aws-s3-dynamical-noaa-hrrr"
       ],
