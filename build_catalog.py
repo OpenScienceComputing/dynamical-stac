@@ -221,11 +221,26 @@ def discover_icechunk_prefixes(bucket: str, region: str) -> list[str]:
 # Item building
 # ---------------------------------------------------------------------------
 
+def _xarray_open_snippet(item_id: str, catalog_url: str) -> str:
+    return (
+        "\n\n## Open in Python\n\n"
+        "```python\n"
+        "import pystac, xarray as xr\n"
+        "import xpystac  # registers xarray backend for icechunk stores\n\n"
+        f'catalog = pystac.Catalog.from_file("{catalog_url}")\n'
+        f'item = catalog.get_item("{item_id}")\n\n'
+        "asset_key = next(k for k in item.assets if '@' in k)\n"
+        "ds = xr.open_dataset(item.assets[asset_key])\n"
+        "```"
+    )
+
+
 def build_item_for_store(
     bucket: str,
     prefix: str,
     region: str,
     entry: dict,
+    catalog_url: str = "",
 ) -> pystac.Item | None:
     store_uri = f"s3://{bucket}/{prefix}"
     log.info("Opening %s ...", store_uri)
@@ -299,7 +314,9 @@ def build_item_for_store(
         end_datetime=end_dt,
         properties={
             "title": item_title,
-            "description": entry.get("Description", ""),
+            "description": (
+                entry.get("Description", "") or ds.attrs.get("description", "")
+            ).strip() + _xarray_open_snippet(item_id, catalog_url),
         },
         stac_extensions=ICECHUNK_STAC_EXTENSIONS,
     )
@@ -363,7 +380,7 @@ def build_item_for_store(
 # Catalog assembly
 # ---------------------------------------------------------------------------
 
-def build_catalog() -> pystac.Catalog:
+def build_catalog(catalog_url: str = "") -> pystac.Catalog:
     catalog = pystac.Catalog(
         id="dynamical-org-icechunk",
         description=(
@@ -382,7 +399,7 @@ def build_catalog() -> pystac.Catalog:
 
         log.info("\nScanning s3://%s (%s) ...", bucket, entry.get("Name", "?"))
         for prefix in discover_icechunk_prefixes(bucket, region):
-            item = build_item_for_store(bucket, prefix, region, entry)
+            item = build_item_for_store(bucket, prefix, region, entry, catalog_url)
             if item:
                 catalog.add_item(item)
 
@@ -439,7 +456,8 @@ def main() -> None:
     output_dir = args.output_dir or Path(tempfile.mkdtemp(prefix="dynamical-stac-"))
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    catalog = build_catalog()
+    catalog_url = f"https://{args.public_domain}/{args.catalog_prefix}/catalog.json"
+    catalog = build_catalog(catalog_url)
 
     n = len(list(catalog.get_items()))
     if n == 0:
@@ -453,7 +471,6 @@ def main() -> None:
     else:
         upload_to_s3(output_dir, args.catalog_bucket, args.catalog_prefix, args.profile)
 
-    catalog_url = f"https://{args.public_domain}/{args.catalog_prefix}/catalog.json"
     print(f"\nCatalog URL:  {catalog_url}")
     print(
         "STAC Browser: https://radiantearth.github.io/stac-browser/#/external/"
