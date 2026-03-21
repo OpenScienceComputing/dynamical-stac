@@ -1,0 +1,18 @@
+name: dynamical-stac
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+    - icechunk
+    - xarray
+    - zarr
+    - pystac
+    - xstac
+    - rioxarray
+    - s3fs
+    - requests
+    - pyyaml
+    - numpy

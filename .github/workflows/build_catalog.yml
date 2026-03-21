@@ -1,0 +1,39 @@
+name: Build dynamical.org STAC Catalog
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # every hour
+  workflow_dispatch:       # allow manual runs from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: environment.yml
+          cache-environment: true
+          init-shell: bash
+
+      - name: Configure R2 credentials
+        run: |
+          mkdir -p ~/.aws
+          printf '[osc-pub-r2]\naws_access_key_id=%s\naws_secret_access_key=%s\nendpoint_url=%s\n' \
+            "$R2_KEY_ID" "$R2_SECRET" "$R2_ENDPOINT" > ~/.aws/credentials
+        env:
+          R2_KEY_ID:   ${{ secrets.R2_KEY_ID }}
+          R2_SECRET:   ${{ secrets.R2_SECRET }}
+          R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+
+      - name: Build catalog and publish to R2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          micromamba run -n dynamical-stac python build_catalog.py \
+            --catalog-bucket osc-pub \
+            --catalog-prefix stac/dynamical \
+            --profile osc-pub-r2 \
+            --public-domain r2-pub.openscicomp.io
