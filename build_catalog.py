@@ -33,6 +33,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+import html
+from html.parser import HTMLParser
 import icechunk
 import numpy as np
 import pystac
@@ -221,6 +223,28 @@ def discover_icechunk_prefixes(bucket: str, region: str) -> list[str]:
 # Item building
 # ---------------------------------------------------------------------------
 
+class _HTMLStripper(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self._parts: list[str] = []
+
+    def handle_data(self, data: str) -> None:
+        self._parts.append(data)
+
+    def handle_starttag(self, tag: str, attrs) -> None:
+        if tag in ("p", "li", "br"):
+            self._parts.append("\n")
+
+    def get_text(self) -> str:
+        return html.unescape("".join(self._parts)).strip()
+
+
+def _strip_html(text: str) -> str:
+    stripper = _HTMLStripper()
+    stripper.feed(text)
+    return stripper.get_text()
+
+
 def _xarray_open_snippet(item_id: str, catalog_url: str) -> str:
     return (
         "\n\n## Open in Python\n\n"
@@ -314,9 +338,9 @@ def build_item_for_store(
         end_datetime=end_dt,
         properties={
             "title": item_title,
-            "description": (
+            "description": _strip_html(
                 entry.get("Description", "") or ds.attrs.get("description", "")
-            ).strip() + _xarray_open_snippet(item_id, catalog_url),
+            ) + _xarray_open_snippet(item_id, catalog_url),
         },
         stac_extensions=ICECHUNK_STAC_EXTENSIONS,
     )
