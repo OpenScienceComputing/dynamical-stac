@@ -1,8 +1,8 @@
 name: Build dynamical.org STAC Catalog
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # every hour
+  # schedule:
+  #   - cron: '0 * * * *'  # every hour (disabled)
   workflow_dispatch:       # allow manual runs from the Actions tab
 
 jobs:
